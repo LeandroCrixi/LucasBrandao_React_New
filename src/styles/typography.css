@@ -1,0 +1,36 @@
+/* typography.css - Typography utilities and variables */
+:root {
+    --font-main: 'Montserrat', Arial, sans-serif;
+    --font-size-h1: 3.2em;
+    --font-size-h2: 2.2em;
+    --font-size-base: 1em;
+    --font-weight-bold: 700;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+    --line-height-heading: 1.1;
+    --line-height-base: 1.5;
+}
+
+.h1 {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+.h2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+.text-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.text-medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.text-regular {
+    font-weight: var(--font-weight-regular);
+}

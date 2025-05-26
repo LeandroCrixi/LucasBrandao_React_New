@@ -1,0 +1,207 @@
+/* Quadros Section */
+.quadrosSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 2rem;
+    max-width: 1200px;
+    margin: 2.5rem auto 0 auto;
+    background: none;
+}
+
+.quadroBox {
+    background: #e0b060;
+    border-radius: 0.5rem;
+    padding: 2.2rem 2rem 2.2rem 2.5rem;
+    color: var(--color-text-main);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 260px;
+}
+
+.quadroTitle {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-bg-accent);
+    font-style: italic;
+    margin-bottom: 1.1rem;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.quadroList {
+    color: var(--color-text-main);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    padding-left: 1.2em;
+}
+
+.quadroList li {
+    margin-bottom: 0.3em;
+    list-style: disc;
+}
+
+.quadroText {
+    color: var(--color-text-main);
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+.quadroListIndented {
+    color: var(--color-text-main);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    padding-left: 2em;
+}
+
+.quadroListIndented li {
+    margin-bottom: 0.3em;
+    list-style: disc;
+}
+
+@media (max-width: 900px) {
+    .quadrosSection {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 98vw;
+    }
+
+    .quadroBox {
+        min-width: 0;
+        padding: 1.2rem 1rem 1.2rem 1rem;
+    }
+}
+
+/* Imprensa + Destaques Page Styles */
+.main {
+    min-height: 100vh;
+    background: var(--color-bg-main);
+    display: block;
+}
+
+.imprensaSection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2.5rem auto 0 auto;
+    background: var(--color-bg-main);
+    border-radius: 10px;
+    overflow: visible;
+    gap: 2.5rem;
+}
+
+.imprensaLeft {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.imprensaBox {
+    background: var(--color-primary);
+    color: var(--color-text-main);
+    border-radius: 0.5rem;
+    padding: 2.2rem 2rem 2.2rem 2.5rem;
+    min-width: 340px;
+    max-width: 420px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.03);
+}
+
+.imprensaBoxTitle {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-bg-accent);
+    font-style: italic;
+    margin-bottom: 1.1rem;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.imprensaBoxText {
+    color: var(--color-text-main);
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+.imprensaBoxList {
+    color: var(--color-text-main);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    padding-left: 1.2em;
+}
+
+.imprensaBoxList li {
+    margin-bottom: 0.3em;
+    list-style: disc;
+    font-style: italic;
+}
+
+.imprensaRight {
+    flex: 1.1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 2.5rem;
+}
+
+.imprensaImgArch {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 0 0 160px 160px / 0 0 160px 160px;
+    background: var(--color-bg-card);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+
+.imprensaTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-main);
+    margin-bottom: 2.2rem;
+    letter-spacing: 2px;
+    font-family: var(--font-main);
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+    .imprensaSection {
+        flex-direction: column;
+        max-width: 98vw;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .imprensaLeft {
+        align-items: center;
+    }
+
+    .imprensaBox {
+        min-width: 0;
+        max-width: 100%;
+        padding: 1.2rem 1rem 1.2rem 1rem;
+    }
+
+    .imprensaRight {
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    .imprensaImgArch {
+        width: 220px;
+        height: 220px;
+        border-radius: 0 0 110px 110px / 0 0 110px 110px;
+    }
+
+    .imprensaTitle {
+        font-size: 2rem;
+    }
+}

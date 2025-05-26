@@ -1,0 +1,17 @@
+Create a modern React project using Vite as the build tool. The project should use the following structure and best practices:
+
+- Use React functional components and arrow functions throughout.
+- Set up routing with react-router-dom, using a dedicated `routes/AppRoutes.jsx` file for all routes.
+- Organize pages in a `src/pages/` directory, with each page in its own folder.
+- Create a reusable `Header` component in `src/components/Header/` and include it in the main layout.
+- Create a reusable `Footer` component in `src/components/Footer/` and include it in the main layout, following the same pattern as the Header component.
+- Use CSS Modules for component-level styles.
+- Add a `src/styles/` directory with:
+  - `global.css` for CSS reset and base styles,
+  - `colors.css` for color variables,
+  - `typography.css` for typography variables and utility classes.
+- Refactor all CSS to use variables and utility classes where appropriate.
+- Ensure the design is modern, mobile-friendly, and scalable for future pages.
+- Use a clean, maintainable folder structure and import the global styles in `src/index.css`.
+- Use Montserrat as the main font family.
+- Include placeholder components for future pages.
