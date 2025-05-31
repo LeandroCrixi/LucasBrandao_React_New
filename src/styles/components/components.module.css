@@ -1,0 +1,23 @@
+.container {
+    max-width: 1200px;
+    padding: 0px 20px;
+}
+
+.btn {
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  font-family: inherit;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.2s;
+  width: 12rem;
+  text-align: center;
+}
+
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

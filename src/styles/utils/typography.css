@@ -1,9 +1,10 @@
 /* typography.css - Typography utilities and variables */
 :root {
     --font-main: 'Montserrat', Arial, sans-serif;
-    --font-size-h1: 3.2em;
-    --font-size-h2: 2.2em;
+    --font-size-h1: 4rem;
+    --font-size-h2: 3rem;
     --font-size-base: 1em;
+    --font-weight-extra-bold: 800;
     --font-weight-bold: 700;
     --font-weight-medium: 500;
     --font-weight-regular: 400;

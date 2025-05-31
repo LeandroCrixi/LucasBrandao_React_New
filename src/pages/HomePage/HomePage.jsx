@@ -1,9 +1,14 @@
 import styles from './HomePage.module.css';
+import component from '../../styles/components/components.module.css'
+import imgHeader from '../../assets/img-header.webp';
+import imgGuitar from '../../assets/img-guitar.webp';
+import imgMais1 from '../../assets/img-mais1.webp';
+import imgMais2 from '../../assets/img-mais2.webp';
 
 const HomePage = () => {
     return (
         <main className={styles.main}>
-            <section className={styles.hero}>
+            <section className={`${styles.hero}`}>
                 <div className={styles.info}>
                     <h1>
                         <span>Lucas</span>
@@ -14,28 +19,26 @@ const HomePage = () => {
                     <p className={styles.roles}>
                         CANTOR | COMPOSITOR | INSTRUMENTISTA
                     </p>
-                    <button className={styles.cta}>OUÇA AGORA</button>
+                    <a className={`${styles.cta} ${component.btn}`}>OUÇA AGORA</a>
                 </div>
                 <div className={styles.imageWrapper}>
-                    {/* Placeholder for artist image */}
                     <div className={styles.imagePlaceholder}>
-                        {/* Add your image here later */}
+                        <img src={imgHeader} alt="" />
                     </div>
                 </div>
             </section>
 
             {/* Sobre Lucas Section */}
-            <section className={styles.sobreSection}>
+            <section className={`${styles.sobreSection} ${component.container}`}>
                 <div className={styles.sobreImageWrapper}>
-                    {/* Replace src with your image path later */}
                     <img
                         className={styles.sobreImage}
-                        src="/assets/sobre-lucas-placeholder.jpg"
+                        src={imgGuitar}
                         alt="Lucas Brandão tocando violão"
                     />
                 </div>
                 <div className={styles.sobreContent}>
-                    <div className={styles.sobreTitle}>Sobre Lucas</div>
+                    <h2 className={styles.sobreTitle}>Sobre Lucas</h2>
                     <div className={styles.sobreText}>
                         Cantor, compositor e instrumentista, Lucas Brandão une reggae, MPB e soul em um repertório que celebra o amor, a ancestralidade e a leveza da vida. Com influências da musicalidade brasileira, seu som é um convite à dança e à reflexão.
                     </div>
@@ -44,37 +47,43 @@ const HomePage = () => {
                         <li>Artista independente</li>
                         <li>Mais de 100 shows realizados no último ano</li>
                     </ul>
-                    <button className={styles.sobreBtn}>LEIA MAIS</button>
+                    <a href='/about' className={`${component.btn} ${styles.sobreBtn}`}>LEIA MAIS</a>
                 </div>
             </section>
+
             {/* Mais que Som, é Alma Section */}
-            <section className={styles.maisQueSomSection}>
-                <div className={styles.maisQueSomTop}>
-                    <div className={styles.maisQueSomImages}>
-                        {/* Replace src with your image paths later */}
-                        <img
-                            className={styles.maisQueSomImg}
-                            src="/assets/mais-que-som-1.jpg"
-                            alt="Lucas Brandão cantando ao microfone"
-                        />
-                        <img
-                            className={styles.maisQueSomImg}
-                            src="/assets/mais-que-som-2.jpg"
-                            alt="Lucas Brandão tocando violão"
-                        />
-                    </div>
-                    <div className={styles.maisQueSomRight}>
+            <section className={`${styles.maisQueSomSection} ${component.container}`}>
+                <div className={styles.maisQueSom}>
+                    {/* Mais que som Left */}
+                    <div className={styles.maisQueSomLeft}>
                         <div className={styles.maisQueSomTitle}>MAIS QUE SOM, É ALMA</div>
                         <div className={styles.maisQueSomSubtitle}>
                             Uma mistura de reggae, MPB e verdade que move o corpo e o espírito.
                         </div>
+
+                        <img
+                            className={styles.maisQueSomImg}
+                            src={imgMais1}
+                            alt="Lucas Brandão cantando ao microfone"
+                        />
+                    </div>
+                    {/* Mais que Som Right */}
+                    <div className={styles.maisQueSomRight}>
+                        <img
+                            className={styles.maisQueSomImg}
+                            src={imgMais2}
+                            alt="Lucas Brandão tocando violão"
+                        />
+
                         <div className={styles.maisQueSomStats}>
                             <div>
                                 <span className={styles.maisQueSomStat}>100+</span>
+                                <br />
                                 <span className={styles.maisQueSomStatLabel}>Shows realizados no último ano</span>
                             </div>
                             <div>
                                 <span className={styles.maisQueSomStat}>10 anos</span>
+                                <br />
                                 <span className={styles.maisQueSomStatLabel}>de evolução e conexão espiritual.</span>
                             </div>
                         </div>

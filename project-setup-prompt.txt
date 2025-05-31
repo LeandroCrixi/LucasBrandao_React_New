@@ -6,7 +6,7 @@ Create a modern React project using Vite as the build tool. The project should u
 - Create a reusable `Header` component in `src/components/Header/` and include it in the main layout.
 - Create a reusable `Footer` component in `src/components/Footer/` and include it in the main layout, following the same pattern as the Header component.
 - Use CSS Modules for component-level styles.
-- Add a `src/styles/` directory with:
+- Add a `src/styles/utils` directory with:
   - `global.css` for CSS reset and base styles,
   - `colors.css` for color variables,
   - `typography.css` for typography variables and utility classes.

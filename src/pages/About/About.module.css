@@ -37,12 +37,12 @@
 }
 
 .aboutContent {
-  flex: 1.5;
-  background: #e0b060;
-  padding: 2.5rem 2rem 2.5rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    flex: 1.5;
+    background: #e0b060;
+    padding: 2.5rem 2rem 2.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .aboutTitle {
