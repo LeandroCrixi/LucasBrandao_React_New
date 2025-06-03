@@ -10,10 +10,9 @@
     align-items: stretch;
     justify-content: center;
     width: 100%;
-    /* margin: 2rem auto; */
     background: var(--color-bg-main);
     overflow: hidden;
-    /* box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04); */
+    padding-bottom: 20px;
 }
 
 .info {
@@ -51,7 +50,7 @@
     align-self: flex-end;
     padding: 0.9rem 2.2rem;
     background-color: var(--color-primary);
-    color: var(--color-white);
+    font-size: var(--font-weight-extra-bold);
 }
 
 .cta:hover {
@@ -64,7 +63,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* min-height: 400px; */
     padding: 40px 20px;
 }
 
@@ -90,7 +88,7 @@
     }
 
     .info h1 {
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
 
     .cta {
@@ -120,23 +118,6 @@
     overflow: hidden;
 }
 
-.sobreImageWrapper {
-    flex: 1.1;
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-end;
-}
-
-.sobreImage {
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-    display: block;
-    border-radius: 10px;
-    padding-top: 40px;
-    z-index: 2;
-}
-
 .sobreContent {
     flex: 1.5;
     padding: 2rem 2rem 2.5rem 2.5rem;
@@ -145,23 +126,14 @@
     justify-content: initial;
 }
 
-.sobreTitle {
-    font-size: var(--font-size-h2);
-    font-weight: var(--font-weight-extra-bold);
+#sobreTitle {
     color: var(--color-text-main);
     background: var(--color-primary);
-    padding: 150px 0px 40px 250px;
-    margin-right: -95px;
-    margin-top: -80px;
-    margin-left: -250px;
-    margin-bottom: 2rem;
-    letter-spacing: 1px;
-    z-index: 1;
 }
 
 .sobreText {
     color: var(--color-text-main);
-    font-size: 1rem;
+    font-size: var(--font-size-text);
     margin-bottom: 1.5rem;
     padding-top: 20px;
     padding-left: 10px;
@@ -172,7 +144,7 @@
     color: var(--color-text-main);
     font-size: 1rem;
     margin-bottom: 2.2rem;
-    padding-left: 5em;
+    padding-left: 3em;
     padding-top: 20px;
 }
 
@@ -215,10 +187,8 @@
         order: 1;
     }
 
-    .sobreTitle {
+    #sobreTitle {
         padding: 20px;
-        margin: 0px;
-        letter-spacing: 0px;
     }
 }
 
@@ -245,11 +215,11 @@
     letter-spacing: 1px;
     margin-bottom: 1rem;
     margin-top: 2rem;
-    font-family: var(--font-main);
+    font-family: var(--font-body);
 }
 
 .maisQueSomSubtitle {
-    font-size: 1rem;
+    font-size: var(--font-size-text);
     color: var(--color-text-main);
     margin-bottom: 1rem;
     font-style: italic;
@@ -287,7 +257,7 @@
 
 .maisQueSomDesc {
     color: var(--color-text-main);
-    font-size: 1rem;
+    font-size: var(--font-size-text);
     line-height: 1.5;
 }
 
@@ -313,5 +283,7 @@
 
     .maisQueSomImg{
         padding-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

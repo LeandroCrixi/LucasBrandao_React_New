@@ -1,8 +1,15 @@
 /* typography.css - Typography utilities and variables */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 :root {
     --font-main: 'Montserrat', Arial, sans-serif;
-    --font-size-h1: 4rem;
-    --font-size-h2: 3rem;
+    --header-font: 'Anton', sans-serif;
+    --body-font: 'Source Sans 3', sans-serif;
+    --font-size-h1: 6rem;
+    --font-size-h2: 4rem;
+    --font-size-text: 1.2rem;
+    --font-size-pageBreak: 2rem;
     --font-size-base: 1em;
     --font-weight-extra-bold: 800;
     --font-weight-bold: 700;

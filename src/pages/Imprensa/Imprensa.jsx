@@ -1,5 +1,5 @@
-
 import styles from './Imprensa.module.css';
+import img from '../../assets/img-header.webp';
 
 const Imprensa = () => {
     return (
@@ -24,7 +24,7 @@ const Imprensa = () => {
                     {/* Replace src with your image path later */}
                     <img
                         className={styles.imprensaImgArch}
-                        src="/assets/imprensa-destaque.jpg"
+                        src={img}
                         alt="Lucas Brandão tocando violão"
                     />
                 </div>

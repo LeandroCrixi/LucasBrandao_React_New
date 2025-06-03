@@ -4,7 +4,7 @@
 
 a {
   font-weight: var(--font-weight-medium);
-  color: var(--color-primary-dark);
+  color: var(--color-text-main);
   text-decoration: inherit;
 }
 

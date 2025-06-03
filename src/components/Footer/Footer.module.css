@@ -9,10 +9,9 @@
 .footerContent {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
     align-items: center;
-    gap: 1.2rem;
 }
 
 .socials {
@@ -28,7 +27,7 @@
 
 .copyright {
     font-size: 0.95rem;
-    text-align: center;
+    text-align: left;
     color: var(--color-white);
 }
 

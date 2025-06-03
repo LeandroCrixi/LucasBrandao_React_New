@@ -1,65 +1,35 @@
 /* About Page Styles */
 .main {
-    min-height: 100vh;
-    background: var(--color-bg-main);
     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .aboutSection {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
-    width: 100%;
-    max-width: 1100px;
-    margin: 2.5rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: center; */
+    /* margin: 2.5rem auto 0 auto; */
     background: var(--color-bg-main);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.03);
-}
-
-.aboutImageWrapper {
-    flex: 1.1;
-    min-width: 260px;
-    background: var(--color-bg-main);
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-end;
-}
-
-.aboutImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    max-height: 370px;
+    /* overflow: hidden; */
+    /* box-shadow: 0 2px 16px rgba(0, 0, 0, 0.03); */
 }
 
 .aboutContent {
     flex: 1.5;
-    background: #e0b060;
     padding: 2.5rem 2rem 2.5rem 2.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-.aboutTitle {
-    font-size: 2.7rem;
-    font-weight: var(--font-weight-bold);
+#aboutTitle {
     color: var(--color-bg-main);
-    margin-bottom: 1.2rem;
-    letter-spacing: 1px;
-    background: var(--color-primary);
-    padding: 0.5rem 2rem 0.5rem 0.5rem;
-    border-radius: 0 0 0 0;
-    width: fit-content;
+    background: var(--color-bg-accent);
 }
 
 .aboutSubtitle {
-    font-size: 1.1rem;
-    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-text);
+    font-weight: var(--font-weight-extra-bold);
     color: var(--color-text-main);
     margin-bottom: 1.2rem;
     letter-spacing: 1px;
@@ -68,22 +38,16 @@
 
 .aboutText {
     color: var(--color-text-main);
-    font-size: 1.08rem;
-    margin-bottom: 2.2rem;
+    font-size: 1rem;
+    margin: 50px auto;
     line-height: 1.6;
 }
 
 .aboutBtn {
     background: var(--color-primary);
     color: var(--color-text-main);
-    border: none;
-    padding: 0.7rem 2.2rem;
-    font-size: 1.1rem;
-    font-weight: var(--font-weight-bold);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    letter-spacing: 2px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .aboutBtn:hover {
@@ -91,22 +55,33 @@
     color: var(--color-white);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
     .aboutSection {
-        flex-direction: column;
-        max-width: 98vw;
+        grid-template-columns: 1fr;
     }
 
-    .aboutImageWrapper {
-        justify-content: center;
+    .aboutSection div {
+        order: 2;
+    }
+
+    .aboutSection .aboutContent {
+        order: 1;
+    }
+
+    .aboutSection .aboutContent .aboutBtn {
+        order: 3;
     }
 
     .aboutContent {
-        padding: 2rem 1rem;
+        padding: 1rem;
     }
 
-    .aboutTitle {
-        font-size: 2rem;
-        padding: 0.5rem 1rem 0.5rem 0.5rem;
+    #aboutTitle {
+        padding: 20px;
+        margin-bottom: 40px ;
+    }
+
+    .aboutSubtitle, .aboutText {
+        padding: 0 20px;
     }
 }

@@ -4,6 +4,7 @@ import imgHeader from '../../assets/img-header.webp';
 import imgGuitar from '../../assets/img-guitar.webp';
 import imgMais1 from '../../assets/img-mais1.webp';
 import imgMais2 from '../../assets/img-mais2.webp';
+import { NavLink } from 'react-router-dom';
 
 const HomePage = () => {
     return (
@@ -28,28 +29,40 @@ const HomePage = () => {
                 </div>
             </section>
 
+            <div className={component.pageBreak}>
+                <p>"Tu vens, tu vens, eu já escuto os teus sinais"
+                    <br />Alceu Valença <br />Anunciação</p>
+            </div>
+
             {/* Sobre Lucas Section */}
-            <section className={`${styles.sobreSection} ${component.container}`}>
-                <div className={styles.sobreImageWrapper}>
+            <section className={`${styles.sobreSection} `}>
+                <div className={`${component.imageWrapper} ${styles.sobreImageWrapper} ${component.miniContainer}`}>
                     <img
-                        className={styles.sobreImage}
+                        className={`${component.image} ${styles.sobreImage}`}
                         src={imgGuitar}
                         alt="Lucas Brandão tocando violão"
                     />
                 </div>
-                <div className={styles.sobreContent}>
-                    <h2 className={styles.sobreTitle}>Sobre Lucas</h2>
-                    <div className={styles.sobreText}>
-                        Cantor, compositor e instrumentista, Lucas Brandão une reggae, MPB e soul em um repertório que celebra o amor, a ancestralidade e a leveza da vida. Com influências da musicalidade brasileira, seu som é um convite à dança e à reflexão.
+                <div className={`${styles.sobreContent}`}>
+                    <h2 className={`${component.aboutTitle}`} id={styles.sobreTitle}>Sobre Lucas</h2>
+                    <div className={`${component.miniContainer}`}>
+                        <div className={styles.sobreText}>
+                            Cantor, compositor e instrumentista, Lucas Brandão une reggae, MPB e soul em um repertório que celebra o amor, a ancestralidade e a leveza da vida. Com influências da musicalidade brasileira, seu som é um convite à dança e à reflexão.
+                        </div>
+                        <ul className={styles.sobreList}>
+                            <li>Localização: Jardim São José, Poá - São Paulo</li>
+                            <li>Artista independente</li>
+                            <li>Mais de 100 shows realizados no último ano</li>
+                        </ul>
                     </div>
-                    <ul className={styles.sobreList}>
-                        <li>Localização: Jardim São José, Poá - São Paulo</li>
-                        <li>Artista independente</li>
-                        <li>Mais de 100 shows realizados no último ano</li>
-                    </ul>
-                    <a href='/about' className={`${component.btn} ${styles.sobreBtn}`}>LEIA MAIS</a>
+                        <NavLink to='/about' className={`${component.btn} ${styles.sobreBtn}`}>LEIA MAIS</NavLink>
                 </div>
             </section>
+
+            <div className={component.pageBreak}>
+                <p>"Quando a gente gosta é claro que a gente cuida"
+                    <br />Caetano Veloso <br /> Sozinho</p>
+            </div>
 
             {/* Mais que Som, é Alma Section */}
             <section className={`${styles.maisQueSomSection} ${component.container}`}>

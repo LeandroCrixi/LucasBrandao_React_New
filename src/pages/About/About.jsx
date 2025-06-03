@@ -1,29 +1,32 @@
 import styles from './About.module.css';
+import component from '../../styles/components/components.module.css'
+import imgGuitar from '../../assets/img-guitar.webp';
+import imgMais1 from '../../assets/img-mais1.webp';
+import imgLucas from '../../assets/img-lucas.webp';
 
 const About = () => {
     return (
-        <main className={styles.main}>
-            <section className={styles.aboutSection}>
-                <div className={styles.aboutImageWrapper}>
-                    {/* Replace src with your image path later */}
+        <main className={`${styles.main}`}>
+            <section className={`${styles.aboutSection}`}>
+                <div className={`${component.imageWrapper} ${component.miniContainer}`}>
                     <img
-                        className={styles.aboutImage}
-                        src="/assets/about-lucas-placeholder.jpg"
+                        className={component.image}
+                        src={imgGuitar}
                         alt="Lucas Brandão tocando violão"
                     />
                 </div>
                 <div className={styles.aboutContent}>
-                    <div className={styles.aboutTitle}>Sobre Lucas</div>
-                    <div className={styles.aboutSubtitle}>A TRAJETÓRIA MUSICAL ENTRE REGGAE E BRASILIDADE</div>
-                    <div className={styles.aboutText}>
-                        Nascido e criado em Poá, São Paulo, Lucas Brandão é um artista multifacetado: cantor, compositor e violonista, com raízes na música brasileira e influências que transitam entre o reggae, o samba e a MPB.<br /><br />
-                        Sua trajetória musical começou ainda na infância, no berço cristão, onde teve seu primeiro contato com o violino aos 11 anos. Dois anos depois, em uma viagem de cruzeiro, se encantou pela música ao vivo ao assistir a uma dupla interpretando "Azul," de Djavan – momento que despertou nele a paixão pelo violão, hoje seu "companheiro inseparável."
-                    </div>
-                    <button className={styles.aboutBtn}>CONTATO</button>
+                    <div className={`${component.aboutTitle}`} id={styles.aboutTitle}>Sobre Lucas</div>
+                        <div className={styles.aboutSubtitle}>A TRAJETÓRIA MUSICAL ENTRE REGGAE E BRASILIDADE</div>
+                        <div className={styles.aboutText}>
+                            Nascido e criado em Poá, São Paulo, Lucas Brandão é um artista multifacetado: cantor, compositor e violonista, com raízes na música brasileira e influências que transitam entre o reggae, o samba e a MPB.<br /><br />
+                            Sua trajetória musical começou ainda na infância, no berço cristão, onde teve seu primeiro contato com o violino aos 11 anos. Dois anos depois, em uma viagem de cruzeiro, se encantou pela música ao vivo ao assistir a uma dupla interpretando "Azul," de Djavan – momento que despertou nele a paixão pelo violão, hoje seu "companheiro inseparável."
+                        </div>
+                    <a className={`${styles.aboutBtn} ${component.btn}`}>CONTATO</a>
                 </div>
             </section>
 
-            <section className={styles.aboutSection}>
+            <section className={`${styles.aboutSection} ${component.miniContainer}`}>
                 <div className={styles.aboutContent}>
                     <div className={styles.aboutSubtitle}>A TRAJETÓRIA MUSICAL ENTRE REGGAE E BRASILIDADE</div>
                     <div className={styles.aboutText}>
@@ -53,22 +56,20 @@ const About = () => {
                     {/* <button className={styles.aboutBtn}>CONTATO</button> */}
                 </div>
 
-                <div className={styles.aboutImageWrapper}>
-                    {/* Replace src with your image path later */}
+                <div className={component.imageWrapper}>
                     <img
-                        className={styles.aboutImage}
-                        src="/assets/about-lucas-placeholder.jpg"
+                        className={component.image}
+                        src={imgMais1}
                         alt="Lucas Brandão tocando violão"
                     />
                 </div>
             </section>
 
-            <section className={styles.aboutSection}>
-                <div className={styles.aboutImageWrapper}>
-                    {/* Replace src with your image path later */}
+            <section className={`${styles.aboutSection} ${component.miniContainer}`}>
+                <div className={component.imageWrapper}>
                     <img
-                        className={styles.aboutImage}
-                        src="/assets/about-lucas-placeholder.jpg"
+                        className={component.image}
+                        src={imgLucas}
                         alt="Lucas Brandão tocando violão"
                     />
                 </div>
