@@ -15,6 +15,10 @@ const Footer = () => {
                     2025, All Rights Reserved<br />
                     <span className={styles.credit}>Website design by <a href="https://leandro-crixi.netlify.app/">Leo Crixi</a></span>
                 </div>
+                <div className={styles.contact}>
+                    <p>Para agendamentos e informações:</p>
+                    <a href="tel:+55119949746943">(11) 94974-6943</a>
+                </div>
             </div>
         </footer>
     );
