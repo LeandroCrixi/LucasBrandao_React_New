@@ -34,8 +34,8 @@
 .pageBreak {
   height: 200px;
   width: 100%;
-  background: var(--color-text-main);
-  color: white;
+  background: var(--color-border);
+  color: var(--color-text-main);
   font-size: var(--font-size-pageBreak);
   text-align: center;
   align-content: center;
