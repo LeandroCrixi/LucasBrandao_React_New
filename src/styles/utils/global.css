@@ -26,6 +26,11 @@ dd {
     padding: 0;
 }
 
+blockquote{
+    font-size: var(--font-size-text);
+    font-style: italic;
+}
+
 /* Remove list styles on ul, ol elements */
 ul,
 ol {

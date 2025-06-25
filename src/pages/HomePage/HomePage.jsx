@@ -5,6 +5,9 @@ import imgGuitar from '../../assets/img-guitar.webp';
 import imgMais1 from '../../assets/img-mais1.webp';
 import imgMais2 from '../../assets/img-mais2.webp';
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMusic, faGuitar, faMicrophone } from '@fortawesome/free-solid-svg-icons';
+import CountUpOnView from '../../components/Utils/CountUpOnView';
 
 const HomePage = () => {
     return (
@@ -20,22 +23,53 @@ const HomePage = () => {
                     <p className={styles.roles}>
                         CANTOR | COMPOSITOR | INSTRUMENTISTA
                     </p>
-                    <a className={`${styles.cta} ${component.btn}`}>OUÇA AGORA</a>
+                    {/* <a className={`${styles.cta} ${component.btn}`}>OUÇA AGORA</a> */}
                 </div>
+
                 <div className={styles.imageWrapper}>
                     <div className={styles.imagePlaceholder}>
-                        <img src={imgHeader} alt="" />
+                        <img src={imgHeader} alt="Lucas playing guitar in a forest setting" className={styles.imageFill} />
                     </div>
                 </div>
             </section>
 
-            <div className={component.pageBreak}>
-                <p>"Tu vens, tu vens, eu já escuto os teus sinais"
-                    <br />Alceu Valença <br />Anunciação</p>
+            {/* Page Break for Quote Section */}
+            <div className={`${component.pageBreak} ${styles.pageBreak} ${component.pbContainer}`}>
+                <h2>Inspirações Musicais</h2>
+                <blockquote>"Tu vens, tu vens, eu já escuto os teus sinais" - Alceu Valença, Anunciação</blockquote>
+                <div className={styles.cardsGrid}>
+                    <div className={styles.card}>
+                        <div>
+                            <FontAwesomeIcon icon={faMusic} className={styles.edit} />
+                        </div>
+                        <div>
+                            <h4>MPB</h4>
+                            <p>Influências de grandes nomes como Caetano Veloso e Alceu Valença moldam seu estilo único.</p>
+                        </div>
+                    </div>
+                    <div className={styles.card}>
+                        <div>
+                            <FontAwesomeIcon icon={faGuitar} className={styles.edit} />
+                        </div>
+                        <div>
+                            <h4>Reggae</h4>
+                            <p>Ritmos jamaicanos que trazem leveza e mensagens de paz para suas composições.</p>
+                        </div>
+                    </div>
+                    <div className={styles.card}>
+                        <div>
+                            <FontAwesomeIcon icon={faMicrophone} className={styles.edit} />
+                        </div>
+                        <div>
+                            <h4>Soul</h4>
+                            <p>A profundidade e emoção do soul music complementam sua expressão artística.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/* Sobre Lucas Section */}
-            <section className={`${styles.sobreSection} `}>
+            <section className={`${styles.sobreSection}`}>
                 <div className={`${component.imageWrapper} ${styles.sobreImageWrapper} ${component.miniContainer}`}>
                     <img
                         className={`${component.image} ${styles.sobreImage}`}
@@ -45,65 +79,70 @@ const HomePage = () => {
                 </div>
                 <div className={`${styles.sobreContent}`}>
                     <h2 className={`${component.aboutTitle}`} id={styles.sobreTitle}>Sobre Lucas</h2>
-                    <div className={`${component.miniContainer}`}>
-                        <div className={styles.sobreText}>
+
+                    <div >
+                        <div className={`${component.miniContainer} ${styles.sobreText}`}>
                             Cantor, compositor e instrumentista, Lucas Brandão une reggae, MPB e soul em um repertório que celebra o amor, a ancestralidade e a leveza da vida. Com influências da musicalidade brasileira, seu som é um convite à dança e à reflexão.
                         </div>
-                        <ul className={styles.sobreList}>
-                            <li>Localização: Jardim São José, Poá - São Paulo</li>
-                            <li>Artista independente</li>
-                            <li>Mais de 100 shows realizados no último ano</li>
-                        </ul>
+
+                        <div className={styles.artistStats}>
+                            <div className={styles.statItem}>
+                                <span className={styles.statNumber}>100+</span>
+                                <span className={styles.statLabel}>shows no último ano</span>
+                            </div>
+                            <div className={styles.statItem}>
+                                <span className={styles.statIcon}>📍</span>
+                                <span className={styles.statLabel}>Jardim São José, Poá - SP</span>
+                            </div>
+                            <div className={styles.statItem}>
+                                <span className={styles.statIcon}>🎵</span>
+                                <span className={styles.statLabel}>Artista independente</span>
+                            </div>
+                        </div>
+
                     </div>
-                        <NavLink to='/about' className={`${component.btn} ${styles.sobreBtn}`}>LEIA MAIS</NavLink>
+                    <NavLink to='/about' className={`${component.btn} ${styles.sobreBtn}`}>LEIA MAIS</NavLink>
                 </div>
             </section>
 
-            <div className={component.pageBreak}>
-                <p>"Quando a gente gosta é claro que a gente cuida"
-                    <br />Caetano Veloso <br /> Sozinho</p>
+            {/* Page Break for Quote Section */}
+            <div className={`${component.pageBreak} ${styles.pageBreak} ${component.pbContainer}`}>
+                <h2>Mais que Som, é Alma</h2>
+                <blockquote>"Quando a gente gosta é claro que a gente cuida" - Caetano Veloso, Sozinho</blockquote>
+                <p>Uma mistura de reggae, MPB e verdade que move o corpo e o espírito. Lucas Brandão cria uma experiência musical que transcende o simples entretenimento, conectando-se com o público em um nível mais profundo.</p>
             </div>
 
-            {/* Mais que Som, é Alma Section */}
-            <section className={`${styles.maisQueSomSection} ${component.container}`}>
-                <div className={styles.maisQueSom}>
-                    {/* Mais que som Left */}
-                    <div className={styles.maisQueSomLeft}>
-                        <div className={styles.maisQueSomTitle}>MAIS QUE SOM, É ALMA</div>
-                        <div className={styles.maisQueSomSubtitle}>
-                            Uma mistura de reggae, MPB e verdade que move o corpo e o espírito.
-                        </div>
+            {/* Números que Contam História Section */}
+            <section className={`${styles.numerosContam} ${component.container}`}>
+                <div>
+                    <h2>Números que Contam História</h2>
+                    <div className={`${styles.statsContainer}`}>
+                        <div className={styles.statItem}>
+                            {/* <span className={styles.statNumber}>100 +</span> */}
+                            <span><CountUpOnView target={100} className={styles.statNumber} /> + </span>
 
-                        <img
-                            className={styles.maisQueSomImg}
-                            src={imgMais1}
-                            alt="Lucas Brandão cantando ao microfone"
-                        />
-                    </div>
-                    {/* Mais que Som Right */}
-                    <div className={styles.maisQueSomRight}>
-                        <img
-                            className={styles.maisQueSomImg}
-                            src={imgMais2}
-                            alt="Lucas Brandão tocando violão"
-                        />
-
-                        <div className={styles.maisQueSomStats}>
-                            <div>
-                                <span className={styles.maisQueSomStat}>100+</span>
-                                <br />
-                                <span className={styles.maisQueSomStatLabel}>Shows realizados no último ano</span>
-                            </div>
-                            <div>
-                                <span className={styles.maisQueSomStat}>10 anos</span>
-                                <br />
-                                <span className={styles.maisQueSomStatLabel}>de evolução e conexão espiritual.</span>
-                            </div>
+                            <span className={styles.statLabel}>Shows</span>
+                            <span className={styles.statDescription}>Apresentações realizadas apenas no último ano</span>
                         </div>
-                        <div className={styles.maisQueSomDesc}>
-                            De pequenos locais a grandes momentos, Lucas leva sentimento a cada palco. Os números revelam, acima de tudo, uma existência onde a mesma música com coração, alma e visão.
+                        <div className={styles.statItem}>
+                            <span><CountUpOnView target={10} className={styles.statNumber} /></span>
+                            <span className={styles.statLabel}>Anos</span>
+                            <span className={styles.statDescription}>De evolução e conexão espiritual através da música</span>
+                        </div>
+                        <div className={`${styles.statItem} ${styles.statItemFull}`}>
+                            <span><CountUpOnView target={1000} className={styles.statNumber} />+</span>
+                            <span className={styles.statLabel}>Fãs</span>
+                            <span className={styles.statDescription}>Pessoas tocadas pela sua música em todo o Brasil</span>
                         </div>
                     </div>
+                    <p>De pequenos locais a grandes momentos, Lucas leva sentimento a cada palco. Os números revelam, acima de tudo, uma existência onde a música conecta coração, alma e visão.</p>
+                </div>
+                <div className={styles.imageWrapper}>
+                    <img
+                        className={styles.maisQueSomImg}
+                        src={imgMais2}
+                        alt="Lucas Brandão tocando violão"
+                    />
                 </div>
             </section>
         </main>

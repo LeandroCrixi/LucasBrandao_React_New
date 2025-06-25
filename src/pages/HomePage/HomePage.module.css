@@ -59,20 +59,26 @@
 
 .imageWrapper {
     flex: 1;
-    background: linear-gradient(to right, var(--color-bg-main) 40%, var(--color-bg-accent) 0);
+    /* background: linear-gradient(to right, var(--color-bg-main) 40%, var(--color-bg-accent) 0); */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 0px 20px;
 }
 
 .imagePlaceholder {
     width: 90%;
-    height: 100%;
-    border-radius: 10px;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 20% 100%);
+}
+
+.imageFill {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media (max-width: 600px) {
@@ -104,6 +110,81 @@
     .imagePlaceholder {
         height: 50%;
         border-radius: 10px;
+        clip-path: none;
+    }
+}
+
+/* Page Break Section */
+.pageBreak {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pageBreak h2,
+.pageBreak blockquote {
+    text-align: left;
+}
+
+.pageBreak p {
+    font-size: var(--font-size-pageBreak);
+    text-align: left;
+}
+
+.pageBreak blockquote {
+    display: flex;
+    align-items: center;
+}
+
+.pageBreak blockquote::before {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 50px;
+    background-color: var(--color-text-main);
+    margin-right: 20px;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cardsGrid .card {
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+    gap: 15px;
+}
+
+.cardsGrid .card div {
+    text-align: left;
+}
+
+.cardsGrid .card div h4 {
+    padding-top: 5px;
+}
+
+.cardsGrid .card div p {
+    font-size: var(--font-size-text);
+}
+
+.edit {
+    font-size: 90%;
+}
+
+@media (max-width: 600px) {
+    .cardsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .pageBreak h2,
+    .pageBreak blockquote {
+        text-align: center;
+    }
+
+    .pageBreak blockquote::before {
+        height: 100px;
     }
 }
 
@@ -128,44 +209,31 @@
 
 #sobreTitle {
     color: var(--color-text-main);
-    background: var(--color-primary);
+    /* background: var(--color-primary); */
 }
 
 .sobreText {
     color: var(--color-text-main);
     font-size: var(--font-size-text);
-    margin-bottom: 1.5rem;
-    padding-top: 20px;
-    padding-left: 10px;
+    margin-bottom: 3rem;
     line-height: 1.6;
 }
 
-.sobreList {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 1rem;
-    color: var(--color-text-main);
-    font-size: 1rem;
-    margin-bottom: 2.2rem;
-    padding-left: 3em;
-    padding-top: 10px;
+.artistStats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-.sobreList li {
-    margin-bottom: 0.3em;
-    list-style: none;
-    border: 2px solid var(--color-text-main);
-    background-color: var(--color-bg-card);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px 0px;
-    text-align: center; 
-    align-content: center;
+.artistStats .statItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.sobreList li:first-child{
-    grid-column: 1/3;
+.statNumber {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-extra-bold);
 }
 
 .sobreBtn {
@@ -180,8 +248,10 @@
 }
 
 @media (max-width: 600px) {
-    .sobreSection {
+    .sobreSection,
+    .artistStats {
         flex-direction: column;
+        align-items: center;
     }
 
     .sobreImageWrapper {
@@ -190,10 +260,6 @@
     }
 
     .sobreImage {
-        width: 100%;
-        height: 80%;
-        object-fit: cover;
-        display: block;
         object-position: 0px -80px;
     }
 
@@ -202,102 +268,98 @@
         order: 1;
     }
 
+    .sobreText {
+        text-align: center;
+    }
+
     #sobreTitle {
         padding: 40px;
     }
 }
 
-/* Mais que Som Section */
-.maisQueSomSection {
-    margin: 3rem auto 0 auto;
-    background: var(--color-bg-main);
-    display: flex;
-    gap: 2rem;
-    text-align: center;
-}
-
-.maisQueSom {
+.numerosContam {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+    margin: 40px auto;
 }
 
-.maisQueSomTitle {
-    font-size: var(--font-size-h3);
+.statsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-top: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.numerosContam .statItem {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    gap: 10px;
+}
+
+.statItemFull {
+    justify-self: center;
+    grid-column: 1 / -1;
+}
+
+.numerosContam .statNumber {
+    font-size: var(--font-size-h2-pb);
+}
+
+.numerosContam .statLabel {
+    font-size: var(--font-size-h4);
     font-weight: var(--font-weight-bold);
-    color: var(--color-text-main);
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-    font-family: var(--font-body);
 }
 
-.maisQueSomSubtitle {
-    font-size: var(--font-size-text);
-    color: var(--color-text-main);
-    margin-bottom: 1rem;
-    font-style: italic;
+.statDescription {
+    font-size: var(--font-size-h4);
+}
+
+.numerosContam p {
+    font-size: var(--font-size-h4);
+    padding-top: 20px;
 }
 
 .maisQueSomImg {
     display: inline-block;
+    vertical-align: top;
     width: 90%;
-    height: 300px;
-    border-radius: 10px;
+    height: 90%;
     object-fit: cover;
     object-position: 0px -100px;
-}
-
-.maisQueSomStats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    margin: 1rem 0rem;
-}
-
-.maisQueSomStat {
-    color: var(--color-text-main);
-    font-size: 2rem;
-    font-weight: var(--font-weight-bold);
-    margin: 2rem 0rem;
-}
-
-.maisQueSomStatLabel {
-    color: var(--color-text-main);
-    font-size: 1rem;
-    font-weight: var(--font-weight-medium);
-    margin: 2rem 0rem;
-}
-
-.maisQueSomDesc {
-    color: var(--color-text-main);
-    font-size: var(--font-size-text);
-    line-height: 1.5;
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 20% 100%);
 }
 
 @media (max-width: 600px) {
-    .maisQueSom{
+    .numerosContam {
+        margin: 20px auto;
+    }
+
+    .numerosContam,
+    .statsContainer {
         grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .maisQueSomRight{
-        display: grid;
+    .numerosContam .statItem {
+        width: 100%;
+        padding: 10px;
     }
 
-    .maisQueSom .maisQueSomRight img{
-        order: 3;
+    .statItemFull {
+        grid-column: auto;
     }
 
-    .maisQueSom .maisQueSomRight .maisQueSomStats{
-        order: 1;
-    }
-    .maisQueSom .maisQueSomRight .maisQueSomDesc{
-        order: 2;
+    .numerosContam p {
+        padding-bottom: 40px;
     }
 
-    .maisQueSomImg{
-        padding-top: 40px;
-        margin-left: auto;
-        margin-right: auto;
+    .maisQueSomImg {
+        clip-path: none;
+        object-position: 0px -50px;
     }
 }

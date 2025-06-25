@@ -8,9 +8,11 @@
     --body-font: 'Source Sans 3', sans-serif;
     --font-size-h1: 6rem;
     --font-size-h2: 4rem;
+    --font-size-h2-pb: 2.5rem;
     --font-size-h3: 1.7rem;
+    --font-size-h4: 1.4rem;
     --font-size-text: 1.2rem;
-    --font-size-pageBreak: 2rem;
+    --font-size-pageBreak: 1.4rem;
     --font-size-base: 1em;
     --font-weight-extra-bold: 800;
     --font-weight-bold: 700;
@@ -20,14 +22,26 @@
     --line-height-base: 1.5;
 }
 
-.h1 {
+h1 {
     font-size: var(--font-size-h1);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-heading);
 }
 
-.h2 {
+h2 {
     font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-heading);
 }

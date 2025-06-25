@@ -7,6 +7,10 @@
   padding: 10px 60px;
 }
 
+.pbContainer{
+  padding: 30px 150px;
+}
+
 .btn {
   border-radius: 8px;
   border: none;
@@ -23,7 +27,7 @@
 }
 
 .btn:hover {
-  color: var(--color-white);
+  color: var(--color-border);
 }
 
 .btn:focus,
@@ -32,7 +36,7 @@
 }
 
 .pageBreak {
-  height: 200px;
+  height: 100%;
   width: 100%;
   background: var(--color-border);
   color: var(--color-text-main);
@@ -40,6 +44,11 @@
   text-align: center;
   align-content: center;
   font-style: italic;
+}
+
+.pageBreak h2 {
+  font-size: var(--font-size-h2-pb);
+  font-weight: var(--font-weight-extra-bold);
 }
 
 .imageWrapper {
@@ -54,7 +63,7 @@
   height: 80%;
   object-fit: cover;
   display: block;
-  border-radius: 10px;
+  border-radius: 40px;
   padding-top: 40px;
   z-index: 2;
 }
@@ -76,8 +85,8 @@
 }
 
 @media (max-width: 600px) {
-  .miniContainer {
-    padding: 10px 10px;
+  .miniContainer, .pbContainer {
+    padding: 20px 10px;
   }
 
   .aboutTitle {
