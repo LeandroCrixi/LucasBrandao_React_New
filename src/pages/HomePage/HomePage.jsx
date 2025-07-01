@@ -80,7 +80,7 @@ const HomePage = () => {
                 <div className={`${styles.sobreContent}`}>
                     <h2 className={`${component.aboutTitle}`} id={styles.sobreTitle}>Sobre Lucas</h2>
 
-                    <div >
+                    <div>
                         <div className={`${component.miniContainer} ${styles.sobreText}`}>
                             Cantor, compositor e instrumentista, Lucas Brandão une reggae, MPB e soul em um repertório que celebra o amor, a ancestralidade e a leveza da vida. Com influências da musicalidade brasileira, seu som é um convite à dança e à reflexão.
                         </div>

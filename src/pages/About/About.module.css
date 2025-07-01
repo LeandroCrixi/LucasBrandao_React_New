@@ -5,16 +5,98 @@
     margin-right: auto;
 }
 
+/* Header */
+.headerAbout {
+    background-image: url(../../assets/img-header-about.jpg);
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(80%) blur(8px);
+    -webkit-filter: brightness(80%) blur(8px);
+}
+
+#aboutTitle {
+    /* color: var(--color-bg-main);
+    background: var(--color-bg-accent); */
+    width: 100%;
+    color: var(--color-white);
+    position: absolute;
+    top: 20%;
+    padding-left: 40px;
+    padding-right: 70px;
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* z-index: 2; */
+}
+
+#aboutTitle p {
+    font-size: var(--font-size-pageBreak);
+    padding-top: 40px;
+    padding-right: 40px;
+}
+
+@media (max-width: 1024px) {
+    #aboutTitle {
+        top: 10%;
+    }
+}
+
+@media (max-width: 600px) {
+    #aboutTitle {
+        top: 12%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #aboutTitle p {
+        text-align: center;
+        padding-left: 10px;
+    }
+
+    .aboutSubtitle,
+    .aboutText {
+        padding: 0 20px;
+        text-align: center;
+    }
+}
+
+/* About Section 1 */
 .aboutSection {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     /* justify-content: center; */
     /* margin: 2.5rem auto 0 auto; */
-    background: var(--color-bg-main);
+    /* background: var(--color-bg-main); */
     /* overflow: hidden; */
     /* box-shadow: 0 2px 16px rgba(0, 0, 0, 0.03); */
 }
 
+#as1 {
+    grid-template-columns: 1fr .8fr;
+}
+
+#as2 {
+    grid-template-columns: .8fr 1fr;
+}
+
+#as3 {
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 600px) {
+
+    #as1,
+    #as2,
+    #as3 {
+        grid-template-columns: 1fr;
+    }
+
+    .aboutSection div {
+        order: 2;
+    }
+}
+
+/* About Section 2 */
 .aboutContent {
     flex: 1.5;
     padding: 2.5rem 2rem 2.5rem 2.5rem;
@@ -22,9 +104,8 @@
     flex-direction: column;
 }
 
-#aboutTitle {
-    color: var(--color-bg-main);
-    background: var(--color-bg-accent);
+.aboutSection img {
+    height: 600px;
 }
 
 .aboutSubtitle {
@@ -55,14 +136,6 @@
 }
 
 @media (max-width: 600px) {
-    .aboutSection {
-        grid-template-columns: 1fr;
-    }
-
-    .aboutSection div {
-        order: 2;
-    }
-
     .aboutSection .aboutContent {
         order: 1;
     }
@@ -74,13 +147,124 @@
     .aboutContent {
         padding: 1rem;
     }
+}
 
-    #aboutTitle {
-        padding: 40px;
-        margin-bottom: 40px ;
+/* Page Break */
+.pageBreak {
+    display: grid;
+    grid-template-columns: .35fr 1fr;
+    gap: 100px;
+}
+
+.pageBreakImg {
+    background-image: url(../../assets/guitar.jpg);
+    border-radius: 20px;
+}
+
+.pageBreakContent {
+    align-self: center;
+}
+
+.pageBreakContent h3 {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 40px;
+    gap: 50px;
+}
+
+.card {
+    display: grid;
+    width: 400px;
+    gap: 20px;
+}
+
+.edit {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+}
+
+.card div {
+    text-align: left;
+}
+
+.card div h4 {
+    padding-top: 5px;
+    letter-spacing: .2rem;
+}
+
+.card div p {
+    font-size: var(--font-size-text);
+}
+
+.card:last-child {
+    justify-self: center;
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 1024px) {
+    .pageBreak {
+        grid-template-columns: 1fr;
+        justify-items: left;
     }
 
-    .aboutSubtitle, .aboutText {
-        padding: 0 20px;
+    .pageBreakImg {
+        display: none;
+    }
+}
+
+@media (max-width: 820px) {
+    .pageBreak {
+        justify-items: center;
+    }
+
+    .card {
+        width: 300px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardsGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        justify-self: center;
+    }
+}
+
+.concertList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0px;
+}
+
+.concertList h4 {
+    font-weight: var(--font-weight-bold);
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+
+/* .concertList h4 span{
+    border: 1px solid red;
+    border-radius: 35%;
+    padding: 5px 10px;
+} */
+
+.concertList ul li {
+    /* font-size: var(--font-size-base); */
+    font-size: .9rem;
+    list-style: circle;
+}
+@media (max-width: 1024px){
+    .concertList {
+        grid-template-columns: 1fr;
     }
 }

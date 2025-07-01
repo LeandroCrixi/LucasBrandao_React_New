@@ -13,7 +13,7 @@
     --font-size-h4: 1.4rem;
     --font-size-text: 1.2rem;
     --font-size-pageBreak: 1.4rem;
-    --font-size-base: 1em;
+    --font-size-base: 1rem;
     --font-weight-extra-bold: 800;
     --font-weight-bold: 700;
     --font-weight-medium: 500;
@@ -56,4 +56,10 @@ h4 {
 
 .text-regular {
     font-weight: var(--font-weight-regular);
+}
+
+@media (max-width: 820px){
+    h2{
+        font-size: 3rem;
+    }
 }

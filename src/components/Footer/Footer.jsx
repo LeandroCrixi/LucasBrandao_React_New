@@ -1,6 +1,4 @@
 import styles from './Footer.module.css';
-import facebookIcon from '../../assets/facebook.png';
-import instagramIcon from '../../assets/instagram.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram  } from '@fortawesome/free-brands-svg-icons';
 
