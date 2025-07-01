@@ -125,12 +125,12 @@ const HomePage = () => {
                             <span className={styles.statDescription}>Apresentações realizadas apenas no último ano</span>
                         </div>
                         <div className={styles.statItem}>
-                            <span><CountUpOnView target={10} className={styles.statNumber} /></span>
+                            <span><CountUpOnView target={10} className={styles.statNumber} /> + </span>
                             <span className={styles.statLabel}>Anos</span>
                             <span className={styles.statDescription}>De evolução e conexão espiritual através da música</span>
                         </div>
                         <div className={`${styles.statItem} ${styles.statItemFull}`}>
-                            <span><CountUpOnView target={1000} className={styles.statNumber} />+</span>
+                            <span><CountUpOnView target={1000} className={styles.statNumber} /> + </span>
                             <span className={styles.statLabel}>Fãs</span>
                             <span className={styles.statDescription}>Pessoas tocadas pela sua música em todo o Brasil</span>
                         </div>

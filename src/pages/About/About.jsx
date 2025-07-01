@@ -3,6 +3,7 @@ import component from '../../styles/components/components.module.css'
 import imgGuitar from '../../assets/img-guitar.webp';
 import imgMais1 from '../../assets/img-mais1.webp';
 import imgLucas from '../../assets/img-lucas.webp';
+import guitarImg from '../../assets/guitar.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic, faGuitar, faMicrophone } from '@fortawesome/free-solid-svg-icons';
 
@@ -65,8 +66,10 @@ const About = () => {
             </section>
 
             {/* Page Break for About Section */}
-            <div className={`${component.pbContainer} ${styles.pageBreak}`}>
-                <div className={styles.pageBreakImg}></div>
+            <div className={`${component.miniContainer} ${styles.pageBreak}`}>
+                <div className={styles.pageBreakImg}>
+                    <img src={guitarImg} alt="" />
+                </div>
 
                 <div className={styles.pageBreakContent}>
                     <h2>Influências Musicais</h2>
@@ -143,23 +146,6 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.aboutSubtitle}>O SOM: AMOR, AUTOCONHECIMENTO E GROOVE</div>
-                    <div className={styles.aboutText}>
-                        Com letras que falam de amor, autoconhecimento e identidade
-                        cultural, Lucas busca transmitir emoção e conexão através de
-                        sua música. Seu estilo único, que mistura a levada do reggae
-                        com a sofisticação da MPB, promete conquistar ainda mais
-                        ouvintes nos próximos anos.
-
-                    </div>
-                    <div className={styles.aboutSubtitle}>PRÓXIMOS PASSOS</div>
-                    <div className={styles.aboutText}>
-                        Com seus 20 e poucos anos, Lucas Brandão prepara novos
-                        trabalhos autorais e mira expandir sua presença em festivais e
-                        eventos culturais. Sua missão é levar a essência da música
-                        brasileira a novos públicos, sempre com autenticidade e
-                        paixão.
-                    </div>
                     {/* <button className={styles.aboutBtn}>CONTATO</button> */}
                 </div>
 
@@ -171,6 +157,34 @@ const About = () => {
                     />
                 </div>
             </section>
+
+            {/* Page Break Estilo e Mensagem */}
+            <div className={`${component.miniContainer} ${styles.pgEM}`}>
+                {/* <div className={styles.aboutSubtitle}>O SOM: AMOR, AUTOCONHECIMENTO E GROOVE</div> */}
+                <div className={styles.innerPGEM}>
+                    <div className={styles.aboutSubtitle}>Estilo e Mensagem</div>
+                    <div className={styles.aboutText}>
+                        Com letras que abordam amor, autoconhecimento e identidade cultural, Lucas busca transmitir emoção e conexão através de sua música. Seu estilo único mistura a levada do reggae com a sofisticação da MPB, criando uma sonoridade autêntica que ressoa com diversos públicos.
+                    </div>
+                </div>
+            </div>
+
+            {/* Proximos Passos */}
+            <div className={`${component.miniContainer} ${styles.nextSteps}`}>
+                <div className={styles.nextStepsContent}>
+                    <div className={styles.aboutSubtitle}>PRÓXIMOS PASSOS</div>
+                    <div className={styles.aboutText}>
+                        Com seus 20 e poucos anos, Lucas Brandão prepara novos
+                        trabalhos autorais e mira expandir sua presença em festivais e
+                        eventos culturais. Sua missão é levar a essência da música
+                        brasileira a novos públicos, sempre com autenticidade e
+                        paixão.
+                    </div>
+                </div>
+                <div>
+                    <img src={guitarImg} alt="" />
+                </div>
+            </div>
         </main>
     );
 };
