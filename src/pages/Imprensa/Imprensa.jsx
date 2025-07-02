@@ -1,10 +1,11 @@
 import styles from './Imprensa.module.css';
+import component from '../../styles/components/components.module.css'
 import img from '../../assets/img-header.webp';
 
 const Imprensa = () => {
     return (
         <main className={styles.main}>
-            <div className={styles.imprensaTitle}>Imprensa + Destaques</div>
+            {/* <div className={styles.imprensaTitle}>Imprensa + Destaques</div>
             <section className={styles.imprensaSection}>
                 <div className={styles.imprensaLeft}>
                     <div className={styles.imprensaBox}>
@@ -20,17 +21,17 @@ const Imprensa = () => {
                         </ul>
                     </div>
                 </div>
-                <div className={styles.imprensaRight}>
-                    {/* Replace src with your image path later */}
-                    <img
+                <div className={styles.imprensaRight}> */}
+            {/* Replace src with your image path later */}
+            {/* <img
                         className={styles.imprensaImgArch}
                         src={img}
                         alt="Lucas Brandão tocando violão"
                     />
                 </div>
-            </section>
+            </section> */}
             {/* Quadros Section */}
-            <section className={styles.quadrosSection}>
+            {/* <section className={styles.quadrosSection}>
                 <div className={styles.quadroBox}>
                     <div className={styles.quadroTitle}>Músicos colaboradores</div>
                     <ul className={styles.quadroList}>
@@ -67,7 +68,57 @@ const Imprensa = () => {
                         <li>Estratégias de vendas e visibilidade</li>
                     </ul>
                 </div>
-            </section>
+            </section> */}
+            <div>
+                {/* 🎤 Hero Section */}
+                <header className={`${styles.hero}`}>
+                    <div className={styles.heroContent}>
+                        <h1>Imprensa + Destaques</h1>
+                        <p>"Transformando desafios em música e impacto cultural."</p>
+                    </div>
+                </header>
+
+                {/* 📰 Press Highlights */}
+                <section className={styles.section}>
+                    <h2>Destaques na Imprensa</h2>
+                    <div className={styles.pressGrid}>
+                        <div className={styles.pressCard}>
+                            <h3>📻 Rádio Nova FM 85,7</h3>
+                            <p>Entrevista ao vivo sobre carreira independente (2017).</p>
+                        </div>
+                        <div className={styles.pressCard}>
+                            <h3>📺 Programa Agora é com Datena</h3>
+                            <p>Apresentação ao vivo na Band TV (2018).</p>
+                        </div>
+                        <div className={styles.pressCard}>
+                            <h3>🎬 Leste Filmes</h3>
+                            <p>Parceria na criação de webclipes e conteúdo audiovisual.</p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 🎶 Musician Collaborators */}
+                <section className={styles.section}>
+                    <h2>Músicos Colaboradores</h2>
+                    <div className={styles.collabGrid}>
+                        <div className={styles.collabCard}>🎸 Jory Albuquerque<br /><small>Guitarrista</small></div>
+                        <div className={styles.collabCard}>🥁 Gabriel Ávila<br /><small>Baterista</small></div>
+                        <div className={styles.collabCard}>🎹 Nico Carneiro<br /><small>Tecladista</small></div>
+                        <div className={styles.collabCard}>🎷 Alfredo Sabino<br /><small>Multi-instrumentista</small></div>
+                    </div>
+                </section>
+
+                {/* 🎟️ Presentation Formats */}
+                <section className={styles.section}>
+                    <h2>Formatos de Apresentação</h2>
+                    <ul className={styles.formatList}>
+                        <li>🎙️ Voz e violão (acústico)</li>
+                        <li>🎵 Bandas reduzidas (trios e quartetos)</li>
+                        <li>🎤 Banda completa com direção musical personalizada</li>
+                    </ul>
+                </section>
+            </div>
+
         </main>
     );
 };

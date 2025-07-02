@@ -3,7 +3,7 @@
     min-height: 100vh;
     background: var(--color-bg-main);
     display: block;
-    padding: 0px 20px;
+    /* padding: 0px 20px; */
 }
 
 .imprensaTitle {
@@ -207,4 +207,93 @@
         min-width: 0;
         padding: 1.2rem 1rem 1.2rem 1rem;
     }
+}
+
+/* 🎤 Hero Section */
+.hero {
+  background: url('/your-image.jpg') center center / cover no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-bg-main);
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg-accent);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Section styles */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* 📰 Press Cards */
+.pressGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.pressCard {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-left: 5px solid var(--color-primary-dark);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* 🎶 Collaborators */
+.collabGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.collabCard {
+  background: var(--color-white);
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+/* 🎟️ Formats */
+.formatList {
+  list-style: none;
+  padding-left: 0;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.formatList li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
 }

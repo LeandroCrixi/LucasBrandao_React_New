@@ -18,6 +18,8 @@ const Footer = () => {
                 <div className={styles.contact}>
                     <p>Para agendamentos e informações:</p>
                     <a href="tel:+55119949746943">(11) 94974-6943</a>
+                    <br />
+                    <a href="https://www.instagram.com/gisellycinacchi/" target='_blank' aria-label="Instagram">@gisellycinacchi</a>
                 </div>
             </div>
         </footer>
