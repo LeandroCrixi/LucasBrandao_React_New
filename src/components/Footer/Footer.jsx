@@ -1,6 +1,6 @@
 import styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram  } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     return (
@@ -17,9 +17,14 @@ const Footer = () => {
                 </div>
                 <div className={styles.contact}>
                     <p>Para agendamentos e informações:</p>
-                    <a href="tel:+55119949746943">(11) 94974-6943</a>
-                    <br />
-                    <a href="https://www.instagram.com/gisellycinacchi/" target='_blank' aria-label="Instagram">@gisellycinacchi</a>
+                    <a href="https://wa.me/+55119949746943" target="_blank" className={styles.contactLink}>
+                        <span><FontAwesomeIcon icon={faWhatsapp} className={`${styles.edit} ${styles.wp}`} /></span>
+                        <span className={styles.contactText}>(11) 94974-6943</span>
+                    </a>
+                    <a href="https://www.instagram.com/gisellycinacchi/" target="_blank" aria-label="Instagram" className={styles.contactLink}>
+                        <span><FontAwesomeIcon icon={faInstagram} className={`${styles.edit} ${styles.wp}`} /></span>
+                        <span className={styles.contactText}>@gisellycinacchi</span>
+                    </a>
                 </div>
             </div>
         </footer>

@@ -94,11 +94,17 @@ const Imprensa = () => {
                             <h3>🎬 Leste Filmes</h3>
                             <p>Parceria na criação de webclipes e conteúdo audiovisual.</p>
                         </div>
+                        <a href="https://www.youtube.com/live/36Ac1r4KB1o?si=bAKjS8eCTkkFITId" target='_blank'>
+                            <div className={styles.pressCard}>
+                                <h3>🎤 PodCast Portal da Região</h3>
+                                <p>Quadro Fala + Toca com Lucas Brandão</p>
+                            </div>
+                        </a>
                     </div>
                 </section>
 
                 {/* 🎶 Musician Collaborators */}
-                <section className={styles.section}>
+                {/* <section className={styles.section}>
                     <h2>Músicos Colaboradores</h2>
                     <div className={styles.collabGrid}>
                         <div className={styles.collabCard}>🎸 Jory Albuquerque<br /><small>Guitarrista</small></div>
@@ -106,7 +112,7 @@ const Imprensa = () => {
                         <div className={styles.collabCard}>🎹 Nico Carneiro<br /><small>Tecladista</small></div>
                         <div className={styles.collabCard}>🎷 Alfredo Sabino<br /><small>Multi-instrumentista</small></div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* 🎟️ Presentation Formats */}
                 <section className={styles.section}>

@@ -1,3 +1,4 @@
+/* Align icon and text horizontally for contact links */
 /* Footer styles */
 .footer {
     background: var(--color-bg-accent);
@@ -49,6 +50,19 @@
     font-size: 0.85rem;
     opacity: 0.7;
     margin-top: 0.2rem;
+}
+
+.contactLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: none;
+    color: inherit;
+}
+
+.wp {
+    font-size: 20px;
+    padding-top: 5px;
 }
 
 @media (max-width: 600px) {

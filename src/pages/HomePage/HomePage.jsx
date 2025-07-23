@@ -36,7 +36,7 @@ const HomePage = () => {
             {/* Page Break for Quote Section */}
             <div className={`${component.pageBreak} ${styles.pageBreak} ${component.pbContainer}`}>
                 <h2>Inspirações Musicais</h2>
-                <blockquote>"Tu vens, tu vens, eu já escuto os teus sinais" - Alceu Valença, Anunciação</blockquote>
+                <blockquote>"Hoje eu vi que ser bom é natureza minha." - Lucas Brandão</blockquote>
                 <div className={styles.cardsGrid}>
                     <div className={styles.card}>
                         <div>
@@ -108,7 +108,7 @@ const HomePage = () => {
             {/* Page Break for Quote Section */}
             <div className={`${component.pageBreak} ${styles.pageBreak} ${component.pbContainer}`}>
                 <h2>Mais que Som, é Alma</h2>
-                <blockquote>"Quando a gente gosta é claro que a gente cuida" - Caetano Veloso, Sozinho</blockquote>
+                <blockquote>"Pronto para achar a alegria, um sorriso sincero e uma consciência limpa." - Moisés albuquerque</blockquote>
                 <p>Uma mistura de reggae, MPB e verdade que move o corpo e o espírito. Lucas Brandão cria uma experiência musical que transcende o simples entretenimento, conectando-se com o público em um nível mais profundo.</p>
             </div>
 
