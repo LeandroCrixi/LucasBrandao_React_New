@@ -7,19 +7,23 @@ import Shows from '../pages/Shows/Shows';
 import TechRider from '../pages/TechRider/TechRider';
 import Contato from '../pages/Contato/Contato';
 import About from '../pages/About/About';
+import ScrollToTop from '../components/Utils/ScrollToTop';
 
 const AppRoutes = () => {
     return (
-        <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/fotos" element={<Fotos />} />
-            <Route path="/musica" element={<Musica />} />
-            <Route path="/imprensa" element={<Imprensa />} />
-            <Route path="/shows" element={<Shows />} />
-            <Route path="/techrider" element={<TechRider />} />
-            <Route path="/contato" element={<Contato />} />
-        </Routes>
+        <>
+            <ScrollToTop />
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/fotos" element={<Fotos />} />
+                <Route path="/musica" element={<Musica />} />
+                <Route path="/imprensa" element={<Imprensa />} />
+                <Route path="/shows" element={<Shows />} />
+                <Route path="/techrider" element={<TechRider />} />
+                <Route path="/contato" element={<Contato />} />
+            </Routes>
+        </>
     );
 };
 
