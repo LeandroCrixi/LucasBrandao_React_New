@@ -35,6 +35,13 @@
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.sobreBtn {
+    align-self: center;
+    background: var(--color-bg-accent);
+    color: var(--color-white);
+    letter-spacing: 1px;
+}
+
 .pageBreak {
   height: 100%;
   width: 100%;

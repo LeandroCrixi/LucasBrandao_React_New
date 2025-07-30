@@ -276,6 +276,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
+.pressCard p{
+    font-size: var(--font-size-text);
+}
+
 /* 🎶 Collaborators */
 .collabGrid {
     display: grid;

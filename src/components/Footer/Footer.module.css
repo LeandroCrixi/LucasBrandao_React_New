@@ -65,6 +65,10 @@
     padding-top: 5px;
 }
 
+.contact p{
+    font-size: var(--font-size-text);
+}
+
 @media (max-width: 600px) {
     .footer {
         margin: 0px;
@@ -87,5 +91,10 @@
     .copyright {
         text-align: center;
         order: 3;
+    }
+
+    .contact a{
+        display: flex;
+        justify-content: center;
     }
 }

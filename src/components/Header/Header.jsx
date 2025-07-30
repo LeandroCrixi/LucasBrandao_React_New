@@ -33,7 +33,7 @@ const Header = () => {
                         <li><NavLink to="/fotos" onClick={handleClose} className={({ isActive }) => isActive ? styles.active : ''}>FOTOS</NavLink></li>
                         {/* <li><NavLink to="/musica" onClick={handleClose}>MÚSICA + VÍDEO</NavLink></li> */}
                         <li><NavLink to="/imprensa" onClick={handleClose} className={({ isActive }) => isActive ? styles.active : ''}>IMPRENSA + DESTAQUES</NavLink></li>
-                        {/* <li><NavLink to="/shows" onClick={handleClose}>SHOWS AO VIVO</NavLink></li> */}
+                        <li><NavLink to="/shows" onClick={handleClose}>SHOWS AO VIVO</NavLink></li>
                         {/* <li><NavLink to="/techrider" onClick={handleClose}>TECH RIDER</NavLink></li> */}
                         {/* <li><NavLink to="/contato" onClick={handleClose}>CONTATO</NavLink></li> */}
                     </ul>

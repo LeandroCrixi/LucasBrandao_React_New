@@ -1,0 +1,232 @@
+[
+    {
+        "id": 1,
+        "day": 13,
+        "weekDay": "Dom",
+        "month": "Jul",
+        "year": 2025,
+        "dateTime": "2025-07-13",
+        "time": "19:00",
+        "venue": "Centro Gastronomico Tobogã"
+    },
+    {
+        "id": 2,
+        "day": 17,
+        "weekDay": "Qui",
+        "month": "Jul",
+        "year": 2025,
+        "dateTime": "2025-07-17",
+        "time": "21:00",
+        "venue": "Buteco Lionbeer"
+    },
+    {
+        "id": 3,
+        "day": 19,
+        "weekDay": "Sab",
+        "month": "Jul",
+        "year": 2025,
+        "dateTime": "2025-07-19",
+        "time": "20:00",
+        "venue": "Pitangueiras Gastro bar"
+    },
+    {
+        "id": 4,
+        "day": 20,
+        "weekDay": "Dom",
+        "month": "Jul",
+        "year": 2025,
+        "dateTime": "2025-07-20",
+        "time": "14:00",
+        "venue": "Duna's bar"
+    },
+    {
+        "id": 5,
+        "day": 20,
+        "weekDay": "Dom",
+        "month": "Jul",
+        "year": 2025,
+        "dateTime": "2025-07-20",
+        "time": "19:30",
+        "venue": "Bar Brisa Nativa"
+    },
+    {
+        "id": 6,
+        "day": 31,
+        "weekDay": "Qui",
+        "month": "Jul",
+        "year": 2025,
+        "dateTime": "2025-07-31",
+        "time": "21:00",
+        "venue": "Buteco Lionbeer"
+    },
+    {
+        "id": 7,
+        "day": 1,
+        "weekDay": "Sex",
+        "month": "Aug",
+        "year": 2025,
+        "dateTime": "2025-08-01",
+        "time": "21:00",
+        "venue": "Brisa Nativa"
+    },
+    {
+        "id": 8,
+        "day": 9,
+        "weekDay": "Sab",
+        "month": "Aug",
+        "year": 2025,
+        "dateTime": "2025-08-09",
+        "time": "20:00",
+        "venue": "Evento particular"
+    },
+    {
+        "id": 9,
+        "day": 14,
+        "weekDay": "Qui",
+        "month": "Aug",
+        "year": 2025,
+        "dateTime": "2025-08-14",
+        "time": "21:00",
+        "venue": "Buteco Lionbeer"
+    },
+    {
+        "id": 10,
+        "day": 17,
+        "weekDay": "Dom",
+        "month": "Aug",
+        "year": 2025,
+        "dateTime": "2025-08-17",
+        "time": "19:30",
+        "venue": "Brisa Nativa"
+    },
+    {
+        "id": 11,
+        "day": 28,
+        "weekDay": "Qui",
+        "month": "Aug",
+        "year": 2025,
+        "dateTime": "2025-08-28",
+        "time": "21:00",
+        "venue": "Buteco Lionbeer"
+    },
+    {
+        "id": 12,
+        "day": 5,
+        "weekDay": "Sex",
+        "month": "Sep",
+        "year": 2025,
+        "dateTime": "2025-09-05",
+        "time": "21:00",
+        "venue": "Brisa Nativa"
+    },
+    {
+        "id": 13,
+        "day": 11,
+        "weekDay": "Qui",
+        "month": "Sep",
+        "year": 2025,
+        "dateTime": "2025-09-11",
+        "time": "21:00",
+        "venue": "Buteco Lionbeer"
+    },
+    {
+        "id": 14,
+        "day": 25,
+        "weekDay": "Qui",
+        "month": "Sep",
+        "year": 2025,
+        "dateTime": "2025-09-25",
+        "time": "21:00",
+        "venue": "Buteco Lionbeer"
+    },
+    {
+        "id": 15,
+        "day": 3,
+        "weekDay": "Sex",
+        "month": "Oct",
+        "year": 2025,
+        "dateTime": "2025-10-03",
+        "time": "21:00",
+        "venue": "Brisa Nativa"
+    },
+    {
+        "id": 16,
+        "day": 9,
+        "weekDay": "Qui",
+        "month": "Oct",
+        "year": 2025,
+        "dateTime": "2025-10-09",
+        "time": "21:00",
+        "venue": "Buteco Lionbeer"
+    },
+    {
+        "id": 17,
+        "day": 23,
+        "weekDay": "Qui",
+        "month": "Oct",
+        "year": 2025,
+        "dateTime": "2025-10-23",
+        "time": "21:00",
+        "venue": "Buteco Lionbeer"
+    },
+    {
+        "id": 18,
+        "day": 31,
+        "weekDay": "Sex",
+        "month": "Oct",
+        "year": 2025,
+        "dateTime": "2025-10-31",
+        "time": "21:00",
+        "venue": "Brisa Nativa"
+    },
+    {
+        "id": 19,
+        "day": 6,
+        "weekDay": "Qui",
+        "month": "Nov",
+        "year": 2025,
+        "dateTime": "2025-11-06",
+        "time": "21:00",
+        "venue": "Buteco Lionbeer"
+    },
+    {
+        "id": 20,
+        "day": 20,
+        "weekDay": "Qui",
+        "month": "Nov",
+        "year": 2025,
+        "dateTime": "2025-11-20",
+        "time": "21:00",
+        "venue": "Buteco Lionbeer"
+    },
+    {
+        "id": 21,
+        "day": 4,
+        "weekDay": "Qui",
+        "month": "Dec",
+        "year": 2025,
+        "dateTime": "2025-12-04",
+        "time": "21:00",
+        "venue": "Buteco Lionbeer"
+    },
+    {
+        "id": 22,
+        "day": 5,
+        "weekDay": "Sex",
+        "month": "Dec",
+        "year": 2025,
+        "dateTime": "2025-12-05",
+        "time": "21:00",
+        "venue": "Brisa Nativa"
+    },
+    {
+        "id": 23,
+        "day": 21,
+        "weekDay": "Dom",
+        "month": "Dec",
+        "year": 2025,
+        "dateTime": "2025-12-21",
+        "time": "19:30",
+        "venue": "Brisa Nativa"
+    }
+]

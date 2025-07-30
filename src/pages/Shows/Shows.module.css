@@ -1,0 +1,82 @@
+.showsContainer h3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.showsList {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shows {
+    display: grid;
+    grid-template-columns: .6fr .3fr .8fr 2fr;
+    width: 100%;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: center;
+}
+
+.shows:nth-child(odd) {
+    background-color: var(--color-bg-card);
+}
+
+time,
+p {
+    font-size: 2.5rem;
+}
+
+time sup,
+time sub {
+    font-size: 1rem;
+}
+
+p sup,
+p sub {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.showBtn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: var(--color-bg-accent);
+    color: var(--color-white);
+    letter-spacing: 1px;
+    width: 6rem;
+}
+
+.pastShow {
+    opacity: 0.6;
+    filter: grayscale(0.1);
+}
+
+@media (max-width: 900px) {
+    .shows {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .pagination{
+        padding-bottom: 1rem;
+    }
+}
