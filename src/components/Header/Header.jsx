@@ -5,11 +5,8 @@ import { useState } from 'react';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-
     const handleToggle = () => setMenuOpen((open) => !open);
     const handleClose = () => setMenuOpen(false);
-
-
 
     return (
         <header className={styles.header}>
