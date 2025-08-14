@@ -82,6 +82,10 @@ a sub {
         justify-items: center;
     }
 
+    .shows a{
+        justify-items: center;
+    }
+
     .pagination{
         padding-bottom: 1rem;
     }
