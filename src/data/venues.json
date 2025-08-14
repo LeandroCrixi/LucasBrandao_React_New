@@ -3,13 +3,15 @@
         "id": 1,
         "name": "Centro Gastronomico Tobogã",
         "address": "R. Cônego Antônio Manzi, 447",
-        "link": "https://maps.app.goo.gl/Kezp25fkvA8favSj8"
+        "googleLink": "https://maps.app.goo.gl/Kezp25fkvA8favSj8",
+        "appleLink": "https://maps.apple/p/fraDAaVNjR4uvS"
     },
     {
         "id": 2,
         "name": "Buteco Lionbeer",
         "address": "Av. Sapopemba 14022",
-        "link": "https://maps.app.goo.gl/fM95xiHe7VcGpErVA"
+        "googleLink": "https://maps.app.goo.gl/fM95xiHe7VcGpErVA",
+        "appleLink": "https://maps.apple/p/2LSxNinB48w.aY"
     },
     {
         "id": 3,
@@ -19,7 +21,8 @@
         "id": 4,
         "name": "Duna's bar",
         "address": "R. Dr. Virgílio Machado, 104",
-        "link": "https://maps.app.goo.gl/g9Wej2Qv9hd39mvH8"
+        "googleLink": "https://maps.app.goo.gl/g9Wej2Qv9hd39mvH8",
+        "appleLink": "https://maps.apple/p/BfD8ZZFrIDsmqN"
     },
     {
         "id": 5,
@@ -29,7 +32,8 @@
         "id": 6,
         "name": "Bar Brisa Nativa",
         "address": "Rua Victorio Santim 832",
-        "link": "https://maps.app.goo.gl/bVY6yBqy6FD3f2tWA"
+        "googleLink": "https://maps.app.goo.gl/bVY6yBqy6FD3f2tWA",
+        "appleLink": "https://maps.apple/p/5Djzz5Iy1DS8mB"
     },
     {
         "id": 7,
@@ -39,6 +43,7 @@
         "id": 8,
         "name": "Bravok Burger",
         "address": "Rua Dr. Raul Manso Sayao Filho, 617",
-        "link": "https://maps.app.goo.gl/PssUUd8TpwujFvmz5"
+        "googleLink": "https://maps.app.goo.gl/PssUUd8TpwujFvmz5",
+        "appleLink": "https://maps.apple/p/Na6isBMtCKt.2y"
     }
 ]

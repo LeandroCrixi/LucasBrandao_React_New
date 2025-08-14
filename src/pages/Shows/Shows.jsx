@@ -3,6 +3,8 @@ import styles from './Shows.module.css';
 import components from '../../styles/components/components.module.css'
 import venuesData from '../../data/venues.json';
 import showsData from '../../data/shows.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapPin } from '@fortawesome/free-solid-svg-icons';
 
 const ITEMS_PER_PAGE = 20;
 
@@ -17,18 +19,30 @@ function getToday() {
   return toDayOnly(new Date());
 }
 
-const ShowRow = ({ id, dateTime, day, month, year, weekDay, time, venue, link, address }) => {
+const ShowRow = ({ id, dateTime, day, month, year, weekDay, time, venue, appleLink, googleLink, address }) => {
   // Compare only the date part (ignore time)
   const concertDay = toDayOnly(dateTime);
   const today = getToday();
   const isPast = concertDay < today;
+
+  const isIOS =
+    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.userAgent.includes("Mac") && "ontouchend" in document);
+
+  const link = isIOS ? appleLink : googleLink;
 
   return (
     <div key={id} className={`${styles.shows} ${isPast ? styles.pastShow : ''}`}>
       <time dateTime={dateTime}>{`${day} ${month}`}</time>
       <p><sup>{year}</sup><sub>{weekDay}</sub></p>
       <time dateTime={time}>{time}</time>
-      <a href={link} target='_blank' className={styles.venue}> <sup>{venue}</sup><sub>{address}</sub></a>
+      <a href={link} target='_blank' className={styles.venue}>
+        <sup>{venue}</sup>
+        <sub>{address}</sub>
+        <span style={{ fontSize: '0.8em', color: '#666' }}>
+          <FontAwesomeIcon icon={faMapPin} />&nbsp;&nbsp;&nbsp;&nbsp;(Veja no Mapa)
+        </span>
+      </a>
     </div>
   );
 };
@@ -42,10 +56,13 @@ const Shows = () => {
     // This is where you include your new logic.
     const mergedShows = showsData.map(show => {
       const venueInfo = venuesData.find(v => v.id === show.venueId);
+
       return {
         ...show,
         venue: venueInfo?.name || 'Venue Not Found',
-        link: venueInfo?.link || 'Venue Not Found',
+        // link: venueInfo?.link || 'Venue Not Found',
+        googleLink: venueInfo?.googleLink || '',
+        appleLink: venueInfo?.appleLink || '',
         address: venueInfo?.address || ''
       };
     });

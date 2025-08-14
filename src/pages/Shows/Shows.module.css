@@ -26,6 +26,10 @@
     justify-content: center;
 }
 
+.shows a{
+    cursor: pointer;
+}
+
 .shows:nth-child(odd) {
     background-color: var(--color-bg-card);
 }
@@ -83,8 +87,13 @@ a sub {
     }
 
     .shows a{
+        text-align: center;
         justify-items: center;
     }
+
+     .shows a span{
+        display: flex;
+     }
 
     .pagination{
         padding-bottom: 1rem;

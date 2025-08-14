@@ -2,7 +2,7 @@ import styles from './HomePage.module.css';
 import component from '../../styles/components/components.module.css'
 import imgHeader from '../../assets/img-header.webp';
 import imgGuitar from '../../assets/img-guitar.webp';
-import imgMais1 from '../../assets/img-mais1.webp';
+// import imgMais1 from '../../assets/img-mais1.webp';
 import imgMais2 from '../../assets/img-mais2.webp';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
