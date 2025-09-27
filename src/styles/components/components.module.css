@@ -7,7 +7,11 @@
   padding: 10px 60px;
 }
 
-.pbContainer {
+.pbContainerHero {
+  padding: 0px 150px 100px 150px;
+   box-shadow: 5px -10px 8px var(--color-border);
+}
+.pbContainersobreSection {
   padding: 30px 150px;
 }
 
@@ -24,6 +28,7 @@
   width: 12rem;
   text-align: center;
   letter-spacing: 2px;
+  box-shadow: 2px 1px 10px var(--color-text-main2);
 }
 
 .btn:hover {
@@ -45,7 +50,7 @@
 .pageBreak {
   height: 100%;
   width: 100%;
-  background: var(--color-border);
+  background: linear-gradient(to bottom, var(--color-border), var(--color-border-shade));
   color: var(--color-text-main);
   font-size: var(--font-size-pageBreak);
   text-align: center;
@@ -59,7 +64,7 @@
 }
 
 .imageWrapper {
-  flex: 1.1;
+  flex: 1;
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
@@ -70,9 +75,7 @@
   height: 80%;
   object-fit: cover;
   display: block;
-  border-radius: 10px;
-  padding-top: 40px;
-  z-index: 2;
+  margin-top: 40px;
 }
 
 .aboutTitle {
@@ -86,7 +89,7 @@
 }
 
 @media (max-width: 1024px) {
-  .pbContainer {
+  .pbContainerHero, .pbContainersobreSection {
     padding: 40px 100px;
   }
 }
@@ -97,7 +100,7 @@
   }
 
   .miniContainer,
-  .pbContainer {
+  .pbContainerHero, .pbContainersobreSection {
     padding: 20px;
   }
 }
@@ -105,7 +108,7 @@
 @media (max-width: 600px) {
 
   .miniContainer,
-  .pbContainer {
+  .pbContainerHero, .pbContainersobreSection {
     padding: 20px 10px;
   }
 

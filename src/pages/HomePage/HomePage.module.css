@@ -10,7 +10,8 @@
     align-items: stretch;
     justify-content: center;
     width: 100%;
-    background: var(--color-bg-main);
+    background: linear-gradient(to bottom , var(--color-bg-main), var(--color-bg-main-shade));
+    box-shadow: inset 0 -100px var(--color-border);
     overflow: hidden;
     padding-bottom: 20px;
 }
@@ -36,7 +37,7 @@
     width: 100%;
     margin: 1rem 0;
     border: none;
-    border-top: 2px solid var(--color-text-main);
+    border-top: 2px solid var(--color-primary-dark);
 }
 
 .roles {
@@ -72,7 +73,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    clip-path: polygon(0% 0, 100% 0, 100% 100%, 20% 100%);
+    /* clip-path: polygon(0% 0, 100% 0, 100% 100%, 20% 100%); */
 }
 
 .imageFill {
@@ -141,7 +142,7 @@
     display: inline-block;
     width: 2px;
     height: 50px;
-    background-color: var(--color-text-main);
+    background-color: var(--color-primary-dark);
     margin-right: 20px;
 }
 
@@ -171,6 +172,7 @@
 
 .edit {
     font-size: 90%;
+    color: var(--color-primary-dark);
 }
 
 @media (max-width: 600px) {
@@ -197,6 +199,7 @@
     justify-content: center;
     margin: 1rem auto 0 auto;
     overflow: hidden;
+    background: linear-gradient(to bottom , var(--color-bg-main), var(--color-bg-main-shade));
 }
 
 .sobreContent {
@@ -277,7 +280,7 @@
     }
 
     .sobreContent {
-        padding: 0rem 0rem;
+        padding: 0px 0px;
         order: 1;
     }
 

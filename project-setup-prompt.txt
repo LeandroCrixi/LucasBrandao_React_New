@@ -15,3 +15,7 @@ Create a modern React project using Vite as the build tool. The project should u
 - Use a clean, maintainable folder structure and import the global styles in `src/index.css`.
 - Use Montserrat as the main font family.
 - Include placeholder components for future pages.
+
+
+leandrocrixi
+XZBBawxwwSDMHBN0

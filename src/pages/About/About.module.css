@@ -12,8 +12,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(80%) blur(8px);
-    -webkit-filter: brightness(80%) blur(8px);
+    filter: brightness(80%) blur(3px);
+    -webkit-filter: brightness(80%) blur(3px);
 }
 
 #aboutTitle {

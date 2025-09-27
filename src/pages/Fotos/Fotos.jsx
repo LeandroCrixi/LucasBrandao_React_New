@@ -8,6 +8,7 @@ import img5 from '../../assets/fotos/img5.jpg';
 import img6 from '../../assets/fotos/img6.jpg';
 import img7 from '../../assets/fotos/img7.jpg';
 import img8 from '../../assets/fotos/img8.jpg';
+import { NavLink } from 'react-router-dom';
 
 const Fotos = () => {
     return (
@@ -51,6 +52,8 @@ const Fotos = () => {
                         <img className={styles.fotoImg} src={img8} alt="Lucas Brandão performance" />
                     </a>
                 </div>
+
+                <NavLink to="https://drive.google.com/drive/folders/1uPYFrHxsZxKBjRoRLh03tRJ0AIDKEJpe" target='_blank' className={component.btn}>VEJA MAIS FOTOS</NavLink>
             </section>
         </main>
     );

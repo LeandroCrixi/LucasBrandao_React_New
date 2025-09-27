@@ -1,14 +1,17 @@
 /* colors.css - Color variables for the project */
 :root {
     --color-bg-main: #f7e0b6;
+    --color-bg-main-shade: #fdf9ef;
     --color-bg-header: #e9d2a6;
     --color-bg-accent: #7b7b4b;
     --color-bg-card: #d9c7a0;
     --color-primary: #b36a00;
     --color-primary-dark: #8a4c00;
     --color-text-main: #1d3a36;
+    --color-text-main2: #0a1a17;
     --color-link: #646cff;
     --color-link-hover: #535bf2;
     --color-border: #bdb076;
+    --color-border-shade: #aa9356;
     --color-white: #fff;
 }

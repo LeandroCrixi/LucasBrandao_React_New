@@ -26,11 +26,11 @@ const Header = () => {
                 </button>
                 <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
                     <ul>
-                        <li><NavLink to="/about" onClick={handleClose} className={({ isActive }) => isActive ? styles.active : ''}>BIOGRAFIA DO ARTISTA</NavLink></li>
+                        <li><NavLink to="/about" onClick={handleClose} className={({ isActive }) => isActive ? styles.active : ''}>BIOGRAFIA</NavLink></li>
                         <li><NavLink to="/fotos" onClick={handleClose} className={({ isActive }) => isActive ? styles.active : ''}>FOTOS</NavLink></li>
                         {/* <li><NavLink to="/musica" onClick={handleClose}>MÚSICA + VÍDEO</NavLink></li> */}
-                        <li><NavLink to="/imprensa" onClick={handleClose} className={({ isActive }) => isActive ? styles.active : ''}>IMPRENSA + DESTAQUES</NavLink></li>
-                        <li><NavLink to="/shows" onClick={handleClose}>SHOWS AO VIVO</NavLink></li>
+                        <li><NavLink to="/imprensa" onClick={handleClose} className={({ isActive }) => isActive ? styles.active : ''}>NA MÍDIA</NavLink></li>
+                        <li><NavLink to="/shows" onClick={handleClose}>AGENDA</NavLink></li>
                         {/* <li><NavLink to="/techrider" onClick={handleClose}>TECH RIDER</NavLink></li> */}
                         {/* <li><NavLink to="/contato" onClick={handleClose}>CONTATO</NavLink></li> */}
                     </ul>

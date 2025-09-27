@@ -34,7 +34,7 @@ const HomePage = () => {
             </section>
 
             {/* Page Break for Quote Section */}
-            <div className={`${component.pageBreak} ${styles.pageBreak} ${component.pbContainer}`}>
+            <div className={`${component.pageBreak} ${styles.pageBreak} ${component.pbContainerHero}`}>
                 <h2>Inspirações Musicais</h2>
                 <blockquote>"Hoje eu vi que ser bom é natureza minha." - Lucas Brandão</blockquote>
                 <div className={styles.cardsGrid}>
@@ -106,7 +106,7 @@ const HomePage = () => {
             </section>
 
             {/* Page Break for Quote Section */}
-            <div className={`${component.pageBreak} ${styles.pageBreak} ${component.pbContainer}`}>
+            <div className={`${component.pageBreak} ${styles.pageBreak} ${component.pbContainersobreSection}`}>
                 <h2>Mais que Som, é Alma</h2>
                 <blockquote>"Pronto para achar a alegria, um sorriso sincero e uma consciência limpa." - Moisés albuquerque</blockquote>
                 <p>Uma mistura de reggae, MPB e verdade que move o corpo e o espírito. Lucas Brandão cria uma experiência musical que transcende o simples entretenimento, conectando-se com o público em um nível mais profundo.</p>
