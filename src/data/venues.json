@@ -26,7 +26,10 @@
     },
     {
         "id": 5,
-        "name": "New Bar"
+        "name": "Morumbizinho",
+        "address": "R. Vilma, 325",
+        "googleLink": "https://maps.app.goo.gl/qm3o78nzfwfyFHKP6",
+        "appleLink": "https://maps.apple/p/SxThR7-fdFcRPn"
     },
     {
         "id": 6,
@@ -45,5 +48,12 @@
         "address": "Rua Dr. Raul Manso Sayao Filho, 617",
         "googleLink": "https://maps.app.goo.gl/PssUUd8TpwujFvmz5",
         "appleLink": "https://maps.apple/p/Na6isBMtCKt.2y"
+    },
+    {
+        "id": 9,
+        "name": "Mennu Grill & Choperia",
+        "address": "Av. Campanella, 552",
+        "googleLink": "https://maps.app.goo.gl/xPfWaPdh84rxnBXi6",
+        "appleLink": "https://maps.apple/p/I6oYfeIrQQjyHK"
     }
 ]
