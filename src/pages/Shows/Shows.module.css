@@ -85,6 +85,7 @@ a sub {
     .shows {
         grid-template-columns: 1fr;
         justify-items: center;
+        align-items: center;
     }
 
     .shows a{
@@ -94,6 +95,8 @@ a sub {
 
      .shows a span{
         display: flex;
+        align-items: center;
+        justify-content: center;;
      }
 
     .pagination{
