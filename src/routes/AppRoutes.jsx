@@ -7,6 +7,7 @@ import Shows from '../pages/Shows/Shows';
 import TechRider from '../pages/TechRider/TechRider';
 import Contato from '../pages/Contato/Contato';
 import About from '../pages/About/About';
+import Adm from '../pages/Adm/Adm';
 import ScrollToTop from '../components/Utils/ScrollToTop';
 
 const AppRoutes = () => {
@@ -22,6 +23,7 @@ const AppRoutes = () => {
                 <Route path="/shows" element={<Shows />} />
                 <Route path="/techrider" element={<TechRider />} />
                 <Route path="/contato" element={<Contato />} />
+                <Route path="/adm" element={<Adm />} />
             </Routes>
         </>
     );

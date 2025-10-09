@@ -12,8 +12,8 @@ const Footer = () => {
                     {/* <a href="#" aria-label="YouTube" className={styles.icon}><span aria-hidden>▶️</span></a> */}
                 </div>
                 <div className={styles.copyright}>
-                    2025, All Rights Reserved<br />
-                    <span className={styles.credit}>Website design by <a href="https://leo-crixi.com/">Leo Crixi</a></span>
+                    2025, Todos os diretos reservados.<br />
+                    <span className={styles.credit}>Site desenvolvido por <a href="https://leo-crixi.com/">Leo Crixi</a></span>
                 </div>
                 <div className={styles.contact}>
                     <p>Para agendamentos e informações:</p>

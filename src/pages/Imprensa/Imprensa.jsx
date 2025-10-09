@@ -1,6 +1,4 @@
 import styles from './Imprensa.module.css';
-import component from '../../styles/components/components.module.css'
-import img from '../../assets/img-header.webp';
 
 const Imprensa = () => {
     return (
@@ -73,7 +71,7 @@ const Imprensa = () => {
                 {/* 🎤 Hero Section */}
                 <header className={`${styles.hero}`}>
                     <div className={styles.heroContent}>
-                        <h1>Imprensa + Destaques</h1>
+                        <h1>Lucas na Mídia</h1>
                         <p>"Transformando desafios em música e impacto cultural."</p>
                     </div>
                 </header>

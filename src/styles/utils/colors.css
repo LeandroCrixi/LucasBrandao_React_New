@@ -1,17 +1,17 @@
 /* colors.css - Color variables for the project */
 :root {
-    --color-bg-main: #f7e0b6;
-    --color-bg-main-shade: #fdf9ef;
-    --color-bg-header: #e9d2a6;
-    --color-bg-accent: #7b7b4b;
-    --color-bg-card: #d9c7a0;
-    --color-primary: #b36a00;
-    --color-primary-dark: #8a4c00;
-    --color-text-main: #1d3a36;
-    --color-text-main2: #0a1a17;
-    --color-link: #646cff;
-    --color-link-hover: #535bf2;
-    --color-border: #bdb076;
-    --color-border-shade: #aa9356;
-    --color-white: #fff;
+    --color-bg-main: #F7E0B6;
+    --color-bg-main-shade: #FDF9EF;
+    --color-bg-header: #E9D2A6;
+    --color-bg-accent: #7B7B4B;
+    --color-bg-card: #D9C7A0;
+    --color-primary: #B36A00;
+    --color-primary-dark: #8A4C00;
+    --color-text-main: #1D3A36;
+    --color-text-main2: #0A1A17;
+    --color-link: #646CFF;
+    --color-link-hover: #535BF2;
+    --color-border: #BDB076;
+    --color-border-shade: #AA9356;
+    --color-white: #FFFFFF;
 }

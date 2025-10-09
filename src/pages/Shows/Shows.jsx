@@ -1,10 +1,9 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect, memo } from 'react';
 import styles from './Shows.module.css';
 import components from '../../styles/components/components.module.css'
-import venuesData from '../../data/venues.json';
-import showsData from '../../data/shows.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapPin } from '@fortawesome/free-solid-svg-icons';
+import { fetchData } from '../../data/api';
 
 const ITEMS_PER_PAGE = 20;
 
@@ -47,20 +46,54 @@ const ShowRow = ({ id, dateTime, day, month, year, weekDay, time, venue, appleLi
   );
 };
 
+// Memoize ShowRow to avoid unnecessary re-renders when props don't change
+const MemoShowRow = memo(ShowRow);
+
+
 const Shows = () => {
   const [page, setPage] = useState(1);
+  const [fetchedShows, setFetchedShows] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    let mounted = true;
+    const run = async () => {
+      setLoading(true);
+      try {
+        const data = await fetchData();
+        if (!mounted) return;
+        // Always use the remote data as the source (can be empty array)
+        setFetchedShows(Array.isArray(data) ? data : []);
+      } catch (err) {
+        console.error('fetchData error:', err);
+        if (!mounted) return;
+        setError(err?.message || String(err));
+        // On error still set an empty array so UI can render gracefully
+        setFetchedShows([]);
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    };
+
+    run();
+
+    return () => { mounted = false };
+  }, []);
 
   // Merge and sort shows in one memoized step
   const sortedConcerts = useMemo(() => {
     // ## STEP 1: MERGE VENUE INFO INTO SHOWS ##
     // This is where you include your new logic.
-    const mergedShows = showsData.map(show => {
-      const venueInfo = venuesData.find(v => v.id === show.venueId);
+    const source = Array.isArray(fetchedShows) ? fetchedShows : [];
+
+    const mergedShows = source.map(show => {
+      // Supabase may return the related venue as `venues` or `venue` (object)
+      const venueInfo = show?.venues || show?.venue || null;
 
       return {
         ...show,
         venue: venueInfo?.name || 'Venue Not Found',
-        // link: venueInfo?.link || 'Venue Not Found',
         googleLink: venueInfo?.googleLink || '',
         appleLink: venueInfo?.appleLink || '',
         address: venueInfo?.address || ''
@@ -86,9 +119,11 @@ const Shows = () => {
     const sortedPast = past.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime));
 
     return [...sortedUpcoming, ...sortedPast];
-  }, []);
+  }, [fetchedShows]);
 
   // Pagination
+  if (loading) return <div className={styles.showsContainer}><h1 className={styles.title}>SHOWS</h1><p>Carregando shows...</p></div>;
+
   const totalPages = Math.ceil(sortedConcerts.length / ITEMS_PER_PAGE);
   const currentSlice = sortedConcerts.slice(
     (page - 1) * ITEMS_PER_PAGE,
@@ -98,12 +133,13 @@ const Shows = () => {
   return (
     <div className={styles.showsContainer}>
       <h1 className={styles.title}>SHOWS</h1>
-
+      {error && <div style={{ color: 'red' }}>Erro ao buscar shows: {error}</div>}
       <div className={styles.showsList}>
         {currentSlice.length > 0 ? (
           // Use show.id for the key for better performance and stability
-          currentSlice.map((show) => (
-            <ShowRow key={show.id} {...show} />
+          currentSlice.map((show, idx) => (
+            // Render ShowRow directly. Use show.id when available; fallback to a stable composite key.
+            <MemoShowRow key={show.id ?? `${show.dateTime ?? 'no-date'}-${idx}`} {...show} />
           ))
         ) : (
           <p>Nenhum show encontrado.</p>

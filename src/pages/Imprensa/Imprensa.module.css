@@ -225,12 +225,13 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--color-bg-accent);
+    background: linear-gradient(to bottom, var(--color-border), var(--color-border-shade));
 }
 
 .heroContent {
     position: relative;
     z-index: 1;
+    color: var(--color-text-main);
 }
 
 .heroContent h1 {
