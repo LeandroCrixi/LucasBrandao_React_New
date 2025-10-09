@@ -62,16 +62,16 @@ const Adm = () => {
         }
     };
 
-    const handleDeleteShow = async (id) => {
-        if (!confirm('Delete show?')) return;
-        try {
-            await deleteShow(id);
-            setMessage({ type: 'success', text: 'Show deleted' });
-            await loadAll();
-        } catch (err) {
-            setMessage({ type: 'error', text: String(err) });
-        }
-    };
+    // const handleDeleteShow = async (id) => {
+    //     if (!confirm('Delete show?')) return;
+    //     try {
+    //         await deleteShow(id);
+    //         setMessage({ type: 'success', text: 'Show deleted' });
+    //         await loadAll();
+    //     } catch (err) {
+    //         setMessage({ type: 'error', text: String(err) });
+    //     }
+    // };
 
     if (loading) return <div className={styles.container}><h1>Admin</h1><p>Loading...</p></div>;
 
@@ -83,15 +83,14 @@ const Adm = () => {
                 <div className={message.type === 'error' ? styles.error : styles.success}>{message.text}</div>
             )}
             <section className={styles.formSection}>
-                <h2>Venues</h2>
+                <h2>Casas de Show</h2>
                 <form onSubmit={handleVenueSave} className={styles.form}>
-                    <input placeholder="name" value={venueForm.name} onChange={e => setVenueForm({ ...venueForm, name: e.target.value })} required />
-
-                    <input placeholder="address" value={venueForm.address} onChange={e => setVenueForm({ ...venueForm, address: e.target.value })} />
+                    <input placeholder="Nome da casa" value={venueForm.name} onChange={e => setVenueForm({ ...venueForm, name: e.target.value })} required />
+                    <input placeholder="Endereço" value={venueForm.address} onChange={e => setVenueForm({ ...venueForm, address: e.target.value })} />
                     <input placeholder="googleLink" value={venueForm.googleLink} onChange={e => setVenueForm({ ...venueForm, googleLink: e.target.value })} />
                     <input placeholder="appleLink" value={venueForm.appleLink} onChange={e => setVenueForm({ ...venueForm, appleLink: e.target.value })} />
                     <div>
-                        <button className={`${components.btn}`} type="submit">Save Venue</button>
+                        <button className={`${components.btn}`} type="submit">Salvar</button>
                         <button type="button" onClick={() => setVenueForm(emptyVenue)} className={`${components.btn}`}>Reset</button>
                     </div>
                 </form>
@@ -99,10 +98,10 @@ const Adm = () => {
                 <div className={styles.list}>
                     {venues.map(v => (
                         <div key={v.id} className={styles.listItem}>
-                            <div>{v.id} - {v.name}</div>
-                            <div>
+                            <div>{v.name}</div>
+                            {/* <div>
                                 <button className={`${components.btn}`} onClick={() => setVenueForm(v)}>Edit</button>
-                            </div>
+                            </div> */}
                         </div>
                     ))}
                 </div>
@@ -111,23 +110,24 @@ const Adm = () => {
             <section className={styles.formSection}>
                 <h2>Shows</h2>
                 <form onSubmit={handleShowSave} className={styles.form}>
-                    <input placeholder="dateTime (YYYY-MM-DD)" value={showForm.dateTime} onChange={e => setShowForm({ ...showForm, dateTime: e.target.value })} required />
-                    <input placeholder="time (HH:MM)" value={showForm.time} onChange={e => setShowForm({ ...showForm, time: e.target.value })} />
-                    <input placeholder="day" value={showForm.day} onChange={e => setShowForm({ ...showForm, day: e.target.value })} />
-                    <input placeholder="month" value={showForm.month} onChange={e => setShowForm({ ...showForm, month: e.target.value })} />
-                    <input placeholder="year" value={showForm.year} onChange={e => setShowForm({ ...showForm, year: e.target.value })} />
+                    <input placeholder="Data (AAAA-MM-DD)" value={showForm.dateTime} onChange={e => setShowForm({ ...showForm, dateTime: e.target.value })} required />
+                    <input placeholder="Dia da Semana (Seg, Ter...)" value={showForm.weekDay} onChange={e => setShowForm({ ...showForm, weekDay: e.target.value })} required />
+                    <input placeholder="hora (HH:MM)" value={showForm.time} onChange={e => setShowForm({ ...showForm, time: e.target.value })} />
+                    <input placeholder="dia (1, 2, 20...)" value={showForm.day} onChange={e => setShowForm({ ...showForm, day: e.target.value })} />
+                    <input placeholder="mês (Jan, Fev...)" value={showForm.month} onChange={e => setShowForm({ ...showForm, month: e.target.value })} />
+                    <input placeholder="ano (2025)" value={showForm.year} onChange={e => setShowForm({ ...showForm, year: e.target.value })} />
                     <select value={showForm.venueId ?? ''} onChange={e => setShowForm({ ...showForm, venueId: e.target.value ? Number(e.target.value) : null })}>
-                        <option value="">-- select venue --</option>
+                        <option value="">-- Selecione a Casa --</option>
                         {venues.map(v => <option key={v.id} value={v.id}>{v.name}</option>)}
                     </select>
 
                     <div>
-                        <button className={`${components.btn}`} type="submit">Save Show</button>
+                        <button className={`${components.btn}`} type="submit">Salvar</button>
                         <button type="button" onClick={() => setShowForm(emptyShow)} className={`${components.btn}`}>Reset</button>
                     </div>
                 </form>
 
-                <div className={styles.list}>
+                {/* <div className={styles.list}>
                     {shows.map((s, idx) => (
                         <div key={s.id ?? `${s.dateTime ?? 'no-date'}-${s.time ?? 'no-time'}-${idx}`} className={styles.listItem}>
                             <div>{s.dateTime} {s.time} - {s.venues?.name ?? s.venue?.name ?? 'Venue'}</div>
@@ -137,7 +137,7 @@ const Adm = () => {
                             </div>
                         </div>
                     ))}
-                </div>
+                </div> */}
             </section>
         </main>
     );
