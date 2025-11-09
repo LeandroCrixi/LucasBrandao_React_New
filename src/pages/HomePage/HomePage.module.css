@@ -10,7 +10,7 @@
     align-items: stretch;
     justify-content: center;
     width: 100%;
-    background: linear-gradient(to bottom , var(--color-bg-main), var(--color-bg-main-shade));
+    background: linear-gradient(to bottom, var(--color-bg-main), var(--color-bg-main-shade));
     box-shadow: inset 0 -100px var(--color-border);
     overflow: hidden;
     padding-bottom: 20px;
@@ -199,7 +199,7 @@
     justify-content: center;
     margin: 1rem auto 0 auto;
     overflow: hidden;
-    background: linear-gradient(to bottom , var(--color-bg-main), var(--color-bg-main-shade));
+    background: linear-gradient(to bottom, var(--color-bg-main), var(--color-bg-main-shade));
 }
 
 .sobreContent {
@@ -356,6 +356,7 @@
         grid-template-columns: 1fr;
         text-align: center;
     }
+
     .maisQueSomImg {
         clip-path: none;
     }
@@ -392,5 +393,73 @@
 
     .maisQueSomImg {
         object-position: 0px -50px;
+    }
+}
+
+/* Next Show styling - mirror Shows.module.css layout */
+.nextShowSection h3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.nextShowCard {
+    display: grid;
+    grid-template-columns: .6fr .3fr .8fr 2fr;
+    width: 100%;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 200px;
+    margin: 0.5rem auto 1rem auto;
+    background-color: var(--color-bg-header);
+    border-radius: 10px;
+}
+
+.nextShowCard a {
+    cursor: pointer;
+}
+
+.nextShowCard time,
+.nextShowCard p {
+    font-size: 2.5rem;
+}
+
+.nextShowCard time sup,
+.nextShowCard time sub {
+    font-size: 1rem;
+}
+
+.nextShowCard p sup,
+.nextShowCard p sub,
+.nextShowCard a sup,
+.nextShowCard a sub {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nextShowCard .venue sup {
+    font-size: 2rem;
+}
+
+@media (max-width: 900px) {
+    .nextShowCard {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    .nextShowCard a {
+        text-align: center;
+        justify-items: center;
+    }
+
+    .nextShowCard a span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ;
     }
 }

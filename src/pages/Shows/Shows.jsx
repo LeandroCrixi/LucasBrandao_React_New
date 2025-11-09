@@ -9,7 +9,17 @@ const ITEMS_PER_PAGE = 20;
 
 // Returns just the date (no time) from a Date or date string
 function toDayOnly(dateInput) {
-  const date = new Date(dateInput);
+  // If the input is a date-only string like "2025-11-09",
+  // `new Date('YYYY-MM-DD')` is parsed as UTC which can shift the
+  // local date depending on the user's timezone. To avoid marking
+  // today's shows as past we should construct a local date when
+  // the string is a plain ISO date (no time).
+  if (typeof dateInput === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(dateInput)) {
+    const [y, m, d] = dateInput.split('-').map(Number);
+    return new Date(y, m - 1, d);
+  }
+
+  const date = dateInput instanceof Date ? dateInput : new Date(dateInput);
   return new Date(date.getFullYear(), date.getMonth(), date.getDate());
 }
 
@@ -23,6 +33,7 @@ const ShowRow = ({ id, dateTime, day, month, year, weekDay, time, venue, appleLi
   const concertDay = toDayOnly(dateTime);
   const today = getToday();
   const isPast = concertDay < today;
+  // Note: removed debug logs
 
   const isIOS =
     /iPad|iPhone|iPod/.test(navigator.userAgent) ||

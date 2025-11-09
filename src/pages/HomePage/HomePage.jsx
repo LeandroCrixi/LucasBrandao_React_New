@@ -1,5 +1,7 @@
 import styles from './HomePage.module.css';
 import component from '../../styles/components/components.module.css'
+import { useEffect, useState } from 'react';
+import { fetchData } from '../../data/api';
 import imgHeader from '../../assets/img-header.webp';
 import imgGuitar from '../../assets/img-guitar.webp';
 // import imgMais1 from '../../assets/img-mais1.webp';
@@ -8,6 +10,89 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic, faGuitar, faMicrophone } from '@fortawesome/free-solid-svg-icons';
 import CountUpOnView from '../../components/Utils/CountUpOnView';
+
+// Helper: parse date-only strings (YYYY-MM-DD) as local dates to avoid UTC shift
+function toDayOnly(dateInput) {
+    if (typeof dateInput === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(dateInput)) {
+        const [y, m, d] = dateInput.split('-').map(Number);
+        return new Date(y, m - 1, d);
+    }
+    const date = dateInput instanceof Date ? dateInput : new Date(dateInput);
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+}
+
+const NextShow = () => {
+    const [next, setNext] = useState(null);
+    const [loadingNext, setLoadingNext] = useState(true);
+    const [errorNext, setErrorNext] = useState(null);
+
+    useEffect(() => {
+        let mounted = true;
+        const run = async () => {
+            setLoadingNext(true);
+            try {
+                const data = await fetchData();
+                if (!mounted) return;
+                const source = Array.isArray(data) ? data : [];
+
+                const merged = source.map(show => {
+                    const venueInfo = show?.venues || show?.venue || null;
+                    return {
+                        ...show,
+                        venue: venueInfo?.name || 'Venue Not Found',
+                        googleLink: venueInfo?.googleLink || '',
+                        appleLink: venueInfo?.appleLink || '',
+                        address: venueInfo?.address || ''
+                    };
+                });
+
+                const today = toDayOnly(new Date());
+                const upcoming = merged.filter(s => toDayOnly(s.dateTime) >= today);
+                upcoming.sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
+
+                setNext(upcoming[0] || null);
+            } catch (err) {
+                console.error('NextShow fetch error', err);
+                if (!mounted) return;
+                setErrorNext(err?.message || String(err));
+                setNext(null);
+            } finally {
+                if (mounted) setLoadingNext(false);
+            }
+        };
+
+        run();
+        return () => { mounted = false };
+    }, []);
+
+    if (loadingNext) return null;
+    if (errorNext) return <div style={{ color: 'red' }}>Erro ao buscar próximo show: {errorNext}</div>;
+    if (!next) return (
+        <section style={{ padding: '1rem' }}>
+            <h3>Próximo Show</h3>
+            <p>Sem shows agendados no momento.</p>
+        </section>
+    );
+
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.userAgent.includes("Mac") && "ontouchend" in document);
+    const link = isIOS ? next.appleLink : next.googleLink;
+
+    return (
+        <section className={`${styles.nextShowSection} ${component.miniContainer}`} style={{ padding: '1rem' }}>
+            <h3>Próximo Show</h3>
+            <div className={styles.nextShowCard}>
+                <time dateTime={next.dateTime}>{`${next.day} ${next.month}`}</time>
+                <p><sup>{next.year}</sup><sub>{next.weekDay}</sub></p>
+                <time dateTime={next.time}>{next.time}</time>
+                <a href={link || '#'} target="_blank" rel="noreferrer" className={`${styles.venue}`}>
+                    <sup>{next.venue}</sup>
+                    <sub>{next.address}</sub>
+                    <span style={{ fontSize: '0.8em', color: '#666' }}> <span>📍</span>&nbsp;&nbsp;&nbsp;&nbsp;(Veja no Mapa)</span>
+                </a>
+            </div>
+        </section>
+    );
+}
 
 const HomePage = () => {
     return (
@@ -32,6 +117,9 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
+
+            {/* (NextShow will be rendered below the "Sobre Lucas" section) */}
+
 
             {/* Page Break for Quote Section */}
             <div className={`${component.pageBreak} ${styles.pageBreak} ${component.pbContainerHero}`}>
@@ -67,6 +155,9 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Next Show Section (inserted below Sobre Lucas as requested) */}
+            <NextShow />
 
             {/* Sobre Lucas Section */}
             <section className={`${styles.sobreSection}`}>
