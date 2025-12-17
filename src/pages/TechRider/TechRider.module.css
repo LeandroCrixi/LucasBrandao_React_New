@@ -1,0 +1,150 @@
+.techRider {
+    max-width: 400px;
+    margin: 0 auto;
+    /* padding: 2rem 1rem; */
+    background: var(--color-bg-accent);
+    /* light olive tone */
+    font-family: 'Poppins', sans-serif;
+    color: #1e1e1e;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.header {
+    display: flex;
+    /* align-items: center; */
+    margin-bottom: 1rem;
+    position: relative;
+    height: 300px;
+    background-color: white;
+
+    & .photo {
+        position: absolute;
+        top: 20px;
+        width: 300px;
+    }
+
+    & .titleWrapper {
+        padding-left: 180px;
+
+        & .logo {
+            font-family: "Lobster";
+            text-align: left;
+            font-size: 3rem;
+            color: #223322;
+        }
+
+        & span {
+            color: #e59c00;
+        }
+    }
+}
+
+.roles {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.videoWrapper {
+    background: #d64c4c;
+    width: 100%;
+    height: 140px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    margin-top: 34px;
+}
+
+.playBtn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.agenda {
+    /* background: #d1c6a3; */
+    border: 2px solid var(--color-text-main);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2.5rem;
+
+    & .agendaTitle {
+        color: var(--color-bg-main);
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    & .agendaInfo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 1rem;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        & p {
+            font-size: 1.2rem;
+        }
+    }
+
+    & .dateTime p,
+    .venue p {
+        margin: 0.2rem 0;
+
+    }
+}
+
+
+
+
+
+.btn {
+    display: inline-block;
+    background: #8b6b2f;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #705823;
+}
+
+.contact {
+    border: 2px solid var(--color-text-main);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.contactTitle {
+    font-size: 1.1rem;
+    color: var(--color-bg-main);
+    margin-bottom: 0.5rem;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.contactInfo a {
+    color: #1e1e1e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contactInfo a:hover {
+    color: #8b6b2f;
+}
