@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './TechRider.module.css';
 import lucasImg from '../../assets/lucas-img.png';
-import { fetchData } from '../../data/api';
+import { fetchShows } from '../../data/api';
 
-// Helper: parse date-only strings (YYYY-MM-DD) as local dates to avoid UTC shift
 function toDayOnly(dateInput) {
     if (typeof dateInput === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(dateInput)) {
         const [y, m, d] = dateInput.split('-').map(Number);
@@ -23,7 +22,7 @@ const TechRider = () => {
         const run = async () => {
             setLoading(true);
             try {
-                const data = await fetchData();
+                const data = await fetchShows();
                 if (!mounted) return;
                 const source = Array.isArray(data) ? data : [];
 
@@ -43,7 +42,7 @@ const TechRider = () => {
                 const next = upcoming.length > 0 ? upcoming[0] : null;
                 if (mounted) setNextShow(next);
             } catch (err) {
-                console.error('fetchData error:', err);
+                console.error('fetchShows error:', err);
                 if (mounted) setError(err?.message || String(err));
             } finally {
                 if (mounted) setLoading(false);

@@ -5,7 +5,7 @@ const SUPABASE_URL = 'https://kmjajlmmkwtaobmgsgyo.supabase.co'
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImttamFqbG1ta3d0YW9ibWdzZ3lvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk5NTA3NzEsImV4cCI6MjA3NTUyNjc3MX0.uabn6koBGP4EXfufkfOlTRBXmoUQN4ycQFZelk3rmK8'
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
-const fetchData = async () => {
+const fetchShows = async () => {
     try {
         const { data, error } = await supabase
             .from('shows')
@@ -14,17 +14,13 @@ const fetchData = async () => {
                 venues(name, address, googleLink, appleLink)`)
 
         if (error) {
-            // Log the full error object for easier debugging (policies, status, details)
             // console.error('Supabase error selecting shows:', error);
             throw error;
         }
-        // Helpful debug log so callers see exactly what Supabase returned
         // console.log('supabase response', { data, error });
         return data;
     } catch (error) {
-        // If there's an exception, log the full object so we can inspect stack/status
         console.error('Error fetching data:', error);
-        // Re-throw so callers can also handle errors if needed
         throw error;
     }
 }
@@ -45,7 +41,6 @@ const fetchVenues = async () => {
 
 const upsertVenue = async (venue) => {
     try {
-        // avoid sending explicit null id for new rows (serial PK)
         const payload = { ...venue };
         // if (payload.id === null || payload.id === undefined || payload.id === '') {
         //     delete payload.id;
@@ -67,7 +62,6 @@ const upsertVenue = async (venue) => {
 
 const upsertShow = async (show) => {
     try {
-        // avoid sending explicit null id for new rows (serial PK)
         const payload = { ...show };
         // if (payload.id === null || payload.id === undefined || payload.id === '') {
         //     delete payload.id;
@@ -103,4 +97,4 @@ const deleteShow = async (id) => {
     }
 }
 
-export { fetchData, fetchVenues, upsertVenue, upsertShow, deleteShow }
+export { fetchShows, fetchVenues, upsertVenue, upsertShow, deleteShow }
