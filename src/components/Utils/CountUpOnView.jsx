@@ -27,7 +27,7 @@ const CountUpOnView = ({ target = 100, duration = 2000, className = '' }) => {
     if (!isVisible) return;
 
     let start = 0;
-    const stepTime = Math.max(16, duration / target); // ~60fps cap
+    const stepTime = Math.max(16, duration / target);
     const interval = setInterval(() => {
       start += Math.ceil(target / (duration / stepTime));
       if (start >= target) {
